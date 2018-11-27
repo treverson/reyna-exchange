@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="43px" height="50px" viewBox="0 0 43 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>113</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-184.000000, -1655.000000)">
+            <g id="Feature-Block" transform="translate(0.000000, 759.000000)">
+                <g id="Feature" transform="translate(145.000000, 554.000000)">
+                    <g id="Feature-3" transform="translate(0.000000, 309.000000)">
+                        <g id="113" transform="translate(44.000000, 36.000000)">
+                            <rect id="Body" stroke="#FFFFFF" stroke-width="4.18000004" x="-2.09000002" y="18.91" width="37.18" height="25.18" rx="2.09000002"></rect>
+                            <path d="M18.5625,33.0381148 L18.5625,35.7375 C18.5625,36.8765873 17.6390873,37.8 16.5,37.8 C15.3609127,37.8 14.4375,36.8765873 14.4375,35.7375 L14.4375,33.0381148 C13.2045347,32.311915 12.375,30.9545929 12.375,29.4 C12.375,27.0804041 14.2218254,25.2 16.5,25.2 C18.7781746,25.2 20.625,27.0804041 20.625,29.4 C20.625,30.9545929 19.7954653,32.311915 18.5625,33.0381148 Z" id="Keyhole" fill="#FFFFFF"></path>
+                            <path d="M26.8125,10.5 C26.8125,4.70101013 22.1954365,0 16.5,0 C10.8045635,0 6.1875,4.70101013 6.1875,10.5 L6.1875,16.8" id="Lock" stroke="#FFFFFF" stroke-width="4.18000004" stroke-linecap="round"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

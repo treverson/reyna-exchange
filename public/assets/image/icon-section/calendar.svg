@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="41px" viewBox="0 0 44 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>67</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-183.000000, -1508.000000)">
+            <g id="Feature-Block" transform="translate(0.000000, 759.000000)">
+                <g id="Feature" transform="translate(145.000000, 554.000000)">
+                    <g id="Feature-2" transform="translate(0.000000, 155.000000)">
+                        <g id="67" transform="translate(38.000000, 40.000000)">
+                            <path d="M0,6.11596333 C0,2.73821005 2.73577263,0 6.11801147,0 L37.8819885,0 C41.260873,0 44,2.73781299 44,6.11596333 L44,34.8840367 C44,38.2617899 41.2642274,41 37.8819885,41 L6.11801147,41 C2.73912704,41 0,38.262187 0,34.8840367 L0,6.11596333 Z M4,10.2410254 L4,34.8589746 C4,35.977605 4.91274069,36.9 6.03866339,36.9 L37.9613366,36.9 C39.0921024,36.9 40,35.9862018 40,34.8589746 L40,10.2410254 C40,9.12239495 39.0872593,8.2 37.9613366,8.2 L6.03866339,8.2 C4.90789764,8.2 4,9.1137982 4,10.2410254 Z" id="Base" fill="#FFFFFF"></path>
+                            <polyline id="1" stroke="#FFFFFF" stroke-width="4.08000028" stroke-linecap="round" stroke-linejoin="round" points="14 20.5 18 16.4 18 28.7"></polyline>
+                            <polyline id="1" stroke="#FFFFFF" stroke-width="4.08000028" stroke-linecap="round" stroke-linejoin="round" points="24 20.5 28 16.4 28 28.7"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

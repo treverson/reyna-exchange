@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="36px" viewBox="0 0 47 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 9</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-677.000000, -2604.000000)">
+            <g id="Details-Block" transform="translate(0.000000, 2181.000000)">
+                <g id="Details" transform="translate(147.000000, 381.000000)">
+                    <g id="Detail-2" transform="translate(392.000000, 0.000000)">
+                        <g id="Group-9" transform="translate(140.000000, 44.000000)">
+                            <path d="M6.07692308,16 L6.07692308,3.99582624 C6.07692308,1.78899235 7.9079442,0 10.1694139,0 L38.9075091,0 C41.1677294,0 43,1.79412025 43,4.01171732 L43,27.9882827 C43,30.203893 41.1689789,32 38.9075091,32 L3,32" id="Front-Page" stroke="#FFFFFF" stroke-width="4"></path>
+                            <path d="M6,4 L6,29.0035095 C6,30.6584255 4.65348288,32 3,32 L3,32 C1.34314575,32 0,30.6495018 0,29.0035095 L0,6.99649048 C0,5.34157448 1.34651712,4 3,4 L6,4 Z" id="Fold" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <rect id="Title" stroke="#FFFFFF" stroke-width="2" x="13" y="7" width="22" height="2" rx="1"></rect>
+                            <path d="M12,14 L22,14 L22,24 L12,24 L12,14 Z M24,15 C24,14.4477153 24.455761,14 25.0024733,14 L34.9975267,14 C35.5511774,14 36,14.4438648 36,15 C36,15.5522847 35.544239,16 34.9975267,16 L25.0024733,16 C24.4488226,16 24,15.5561352 24,15 Z M24,19 C24,18.4477153 24.455761,18 25.0024733,18 L34.9975267,18 C35.5511774,18 36,18.4438648 36,19 C36,19.5522847 35.544239,20 34.9975267,20 L25.0024733,20 C24.4488226,20 24,19.5561352 24,19 Z M24,23 C24,22.4477153 24.455761,22 25.0024733,22 L34.9975267,22 C35.5511774,22 36,22.4438648 36,23 C36,23.5522847 35.544239,24 34.9975267,24 L25.0024733,24 C24.4488226,24 24,23.5561352 24,23 Z" id="Content" fill="#FFFFFF" opacity="0.5"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

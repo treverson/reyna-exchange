@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="50px" viewBox="0 0 32 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>18</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-189.000000, -1812.000000)">
+            <g id="Feature-Block" transform="translate(0.000000, 759.000000)">
+                <g id="Feature" transform="translate(145.000000, 554.000000)">
+                    <g id="Feature-4" transform="translate(0.000000, 464.000000)">
+                        <g id="18" transform="translate(49.000000, 40.000000)">
+                            <rect id="Body" stroke="#FFFFFF" stroke-width="4.39999962" stroke-linejoin="round" x="-2.19999981" y="-2.19999981" width="26.3999996" height="44.3999996" rx="2.19999981"></rect>
+                            <rect id="Speaker" fill="#FFFFFF" x="6.6" y="2.22222222" width="8.8" height="2.22222222" rx="1.11111111"></rect>
+                            <ellipse id="Home" fill="#FFFFFF" cx="11" cy="35.5555556" rx="2.2" ry="2.22222222"></ellipse>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

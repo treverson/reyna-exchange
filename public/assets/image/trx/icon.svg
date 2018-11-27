@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="91.2052197%" y1="14.0238015%" x2="17.3304879%" y2="89.6672626%" id="linearGradient-1">
+            <stop stop-color="#7C7C7C" offset="0%"></stop>
+            <stop stop-color="#363636" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-163.000000, -642.000000)">
+            <g id="Hero-Header">
+                <g id="Charts" transform="translate(145.000000, 623.000000)">
+                    <g id="Minicahrts">
+                        <g id="Group-3" transform="translate(18.000000, 19.000000)">
+                            <circle id="Oval" fill="url(#linearGradient-1)" cx="13" cy="13" r="13"></circle>
+                            <g id="Group-2" transform="translate(7.000000, 7.000000)" stroke="#FFFFFF" stroke-width="0.600000024">
+                                <path d="" id="Path-3"></path>
+                                <polygon id="Path-4" points="5.37328677 13.4574808 0.0695831649 0.270603864 10.0853009 2.23358263 12.7329719 4.75815744"></polygon>
+                                <polyline id="Path-5" points="5.37328677 13.0967742 6.27586207 5.56615239 0.221911461 0.270603864"></polyline>
+                                <path d="M6.49560301,5.36238382 L10.0606751,2.21524927 L12.5939932,4.63863334 C12.6303239,4.67338749 12.631602,4.73101317 12.5968478,4.76734389 C12.582302,4.78254961 12.5629375,4.79224663 12.5420485,4.79478543 L6.56683266,5.52100033 C6.51692297,5.52706624 6.47154578,5.49152384 6.46547986,5.44161415 C6.46186302,5.41185517 6.47312903,5.38222314 6.49560301,5.36238382 Z" id="Path-6"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

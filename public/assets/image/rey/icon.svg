@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="90.6824315%" y1="25.4340723%" x2="15.8444677%" y2="85.0907334%" id="linearGradient-1">
+            <stop stop-color="#F58585" offset="0%"></stop>
+            <stop stop-color="#D94F4F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-616.000000, -642.000000)">
+            <g id="Hero-Header">
+                <g id="Charts" transform="translate(145.000000, 623.000000)">
+                    <g id="Minicahrts" transform="translate(453.000000, 0.000000)">
+                        <g id="Group-4" transform="translate(18.000000, 19.000000)">
+                            <circle id="Oval" fill="url(#linearGradient-1)" cx="13" cy="13" r="13"></circle>
+                            <text id="R" font-family="SFUIDisplay-Medium, SF UI Display" font-size="16" font-weight="400" fill="#FFFFFF">
+                                <tspan x="8" y="16">R</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
