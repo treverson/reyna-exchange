@@ -1,10 +1,10 @@
 <template>
-    <form class="account-sidebar-filter">
+    <div class="account-sidebar-filter">
         <div class="account-sidebar-filter__section">
             <label for="side" class="account-sidebar-filter__heading">Side</label>
-            <select id="side" class="account-sidebar-filter__select">
-                <option value="0">All types</option>
-            </select>
+            <div id="side" class="account-sidebar-filter__select">
+                <span class="account-sidebar-filter__select-current">All types</span>
+            </div>
         </div>
         <div class="account-sidebar-filter__section">
             <label for="currencies" class="account-sidebar-filter__heading">Currency</label>
@@ -12,31 +12,68 @@
                 <option value="0">All currencies</option>
             </select>
         </div>
-        <div class="account-sidebar-filter__section">
+        <div v-show="showOnlyConstructor.length > 0" class="account-sidebar-filter__section">
             <label class="account-sidebar-filter__heading">Show only</label>
-            <div class="account-sidebar-filter__checkbox">
-                <input type="radio" name="show-only" id="last-30-days" class="account-sidebar-filter__checkbox-hidden">
-                <label for="last-30-days" class="account-sidebar-filter__checkbox-plate">Last 30 days</label>
-            </div>
-            <div class="account-sidebar-filter__checkbox">
-                <input type="radio" name="show-only" id="last-7-days" class="account-sidebar-filter__checkbox-hidden">
-                <label for="last-7-days" class="account-sidebar-filter__checkbox-plate">Last 7 days</label>
-            </div>
-            <div class="account-sidebar-filter__checkbox">
-                <input type="radio" name="show-only" id="last-1-days" class="account-sidebar-filter__checkbox-hidden">
-                <label for="last-1-days" class="account-sidebar-filter__checkbox-plate">Last day</label>
+            <div v-for="item in showOnlyConstructor" v-bind:key="item.id" class="account-sidebar-filter__checkbox">
+                <input v-model="item.model" type="radio" name="show-only" :id="item.code" class="account-sidebar-filter__checkbox-hidden">
+                <label :for="item.code" class="account-sidebar-filter__checkbox-plate">{{ item.title }}</label>
             </div>
         </div>
         <div class="account-sidebar-filter__section">
-            <button class="account-sidebar-filter__button">Reset</button>
+            <button class="account-sidebar-filter__button" @click="resetFilter()">Reset</button>
             <button class="account-sidebar-filter__button">Export orders history</button>
         </div>
-    </form>
+    </div>
 </template>
 
 <script>
     export default {
-        name: "AccountSidebarFilter"
+        name: "AccountSidebarFilter",
+        data () {
+            return {
+                showSideConstructor: [
+                    {
+                        id: 0,
+                        name: 'All types',
+                        active: true
+                    },
+                    {
+                        id: 1,
+                        name: 'Withdraw'
+                    },
+                    {
+                        id: 2,
+                        name: 'Deposit'
+                    }
+                ],
+                showOnlyConstructor: [
+                    {
+                        id: 0,
+                        title: 'Last 30 days',
+                        code: 'last-30-days',
+                        model: false
+                    },
+                    {
+                        id: 1,
+                        title: 'Last 7 days',
+                        code: 'last-7-days',
+                        model: false
+                    },
+                    {
+                        id: 2,
+                        title: 'Last day',
+                        code: 'last-day',
+                        model: false
+                    }
+                ]
+            }
+        },
+        methods: {
+            resetFilter: function () {
+                this.resetShowOnly()
+            },
+            resetShowOnly: function () {}
+        },
     }
 </script>
 
@@ -72,6 +109,7 @@
     }
 
     .account-sidebar-filter__select {
+        position: relative;
         -webkit-appearance: none;
         -moz-appearance: none;
         text-indent: 1px;
@@ -85,12 +123,28 @@
         font-weight: 500;
         line-height: 14px;
 
+        display: flex;
+        align-items: center;
+
+        box-sizing: border-box;
         padding: 0 25px 0 15px;
         outline: none;
+        cursor: pointer;
 
         border: 1px solid #E6E6E6;
         border-radius: 3px;
         background-color: #fff;
+
+        &:after {
+            position: absolute;
+            content: "\e904";
+
+            right: 12px;
+
+            color: #000000;
+            font-size: 3px;
+            font-family: 'icomoon';
+        }
     }
 
     .account-sidebar-filter__checkbox {
@@ -177,5 +231,11 @@
         &:focus {
             background-color: #E6E6E6;
         }
+    }
+
+    .account-sidebar-filter__select-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
     }
 </style>
