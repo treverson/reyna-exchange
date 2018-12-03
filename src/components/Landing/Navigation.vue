@@ -27,8 +27,8 @@
 
 <script>
     import Container from '@/components/Container.vue'
-    import ButtonComponent from '@/components/ButtonComponent.vue'
-    import HamburgerComponent from '@/components/HamburgerComponent.vue'
+    import ButtonComponent from '@/components/Landing/ButtonComponent.vue'
+    import HamburgerComponent from '@/components/Landing/HamburgerComponent.vue'
 
     export default {
         name: "Navigation",

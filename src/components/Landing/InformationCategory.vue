@@ -28,9 +28,9 @@
 
 <script>
     import Container from '@/components/Container'
-    import HeadingSection from '@/components/HeadingSection'
-    import IconSection from '@/components/IconSection'
-    import LearnMore from '@/components/LearnMore'
+    import HeadingSection from '@/components/Landing/HeadingSection'
+    import IconSection from '@/components/Landing/IconSection'
+    import LearnMore from '@/components/Landing/LearnMore'
 
     export default {
         name: "InformationCategory",

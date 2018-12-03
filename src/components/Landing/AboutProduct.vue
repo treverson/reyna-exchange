@@ -2,7 +2,7 @@
     <div class="about-product">
         <Container>
             <HeadingSection heading="Create your digital currency portfolio today" description="ReynaExchange has a variety of features that make it the best place to start trading" />
-            <img src="../assets/about-product-background.png" class="about-product__mobile-background">
+            <img src="../../assets/img/about-product-background.png" class="about-product__mobile-background">
             <div class="about-product__grid">
                 <div class="about-product__item">
                     <IconSection icon-location="assets/image/icon-section/graph.svg" />
@@ -38,9 +38,9 @@
 </template>
 
 <script>
-    import HeadingSection from '@/components/HeadingSection'
+    import HeadingSection from '@/components/Landing/HeadingSection'
     import Container from '@/components/Container'
-    import IconSection from '@/components/IconSection'
+    import IconSection from '@/components/Landing/IconSection'
 
     export default {
         name: "AboutProduct",
@@ -76,7 +76,7 @@
             height: 874px;
             display: inline-block;
 
-            background-image: url('../assets/about-product-background.png');
+            background-image: url('../../assets/img/about-product-background.png');
         }
     }
 

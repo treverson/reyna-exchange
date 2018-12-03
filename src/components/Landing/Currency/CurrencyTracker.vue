@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import CurrencyChart from '@/components/CurrencyChart.js'
+import CurrencyChart from '@/components/Landing/Currency/CurrencyChart.js'
 
 export default {
     name: "CurrencyTracker",

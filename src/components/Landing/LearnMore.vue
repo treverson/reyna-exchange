@@ -43,7 +43,7 @@ export default {
             transition: .15s ease;
 
             background-repeat: no-repeat;
-            background-image: url('../assets/arrow-right.svg');
+            background-image: url('../../assets/img/arrow-right.svg');
         }
 
         &:hover {

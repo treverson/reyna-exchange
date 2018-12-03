@@ -1,6 +1,6 @@
 <template>
   <transition name="fade" mode="out-in">
-    <div id="page__content">
+    <div class="page__content">
       <Header />
       <AboutProduct />
       <InformationCategory />
@@ -11,11 +11,11 @@
 </template>
 
 <script>
-  import Header from '@/components/Header'
-  import AboutProduct from '@/components/AboutProduct'
-  import InformationCategory from '@/components/InformationCategory'
-  import ProjectDashboard from '@/components/ProjectDashboard'
-  import Footer from '@/components/Footer'
+  import Header from '@/components/Landing/Header'
+  import AboutProduct from '@/components/Landing/AboutProduct'
+  import InformationCategory from '@/components/Landing/InformationCategory'
+  import ProjectDashboard from '@/components/Landing/ProjectDashboard'
+  import Footer from '@/components/Landing/Footer'
 
   export default {
     name: 'home',
@@ -28,3 +28,9 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .page__content {
+    min-height: 100vh;
+  }
+</style>

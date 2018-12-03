@@ -29,7 +29,7 @@
 
 <script>
     import Container from '@/components/Container'
-    import ButtonComponent from '@/components/ButtonComponent'
+    import ButtonComponent from '@/components/Landing/ButtonComponent'
 
     export default {
         name: "Footer",

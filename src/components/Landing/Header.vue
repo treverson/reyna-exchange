@@ -21,9 +21,9 @@
 
 <script>
     import Container from '@/components/Container.vue'
-    import CurrencyTracker from '@/components/CurrencyTracker.vue'
-    import Navigation from '@/components/Navigation.vue'
-    import ButtonComponent from '@/components/ButtonComponent.vue'
+    import CurrencyTracker from '@/components/Landing/Currency/CurrencyTracker.vue'
+    import Navigation from '@/components/Landing/Navigation.vue'
+    import ButtonComponent from '@/components/Landing/ButtonComponent.vue'
 
     export default {
         name: "Header",
