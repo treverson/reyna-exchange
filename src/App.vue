@@ -65,6 +65,9 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  .icon-search:before {
+    content: "\e905";
+  }
   .icon-arrow-down:before {
     content: "\e904";
   }
