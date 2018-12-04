@@ -2,9 +2,9 @@
   <transition name="fade" mode="out-in">
     <div class="page__content page__content--theme-account">
       <AccountHeader />
-      <Container class="container__page-account-buy-and-sell">
-        <AccountExchanger />
-        <AccountReceipt />
+      <Container class="container__page-account-dashboard">
+        <AccountGettingStarted />
+        <AccountMyFunds />
       </Container>
       <AccountFooter />
     </div>
@@ -14,17 +14,17 @@
 <script>
   import AccountHeader from '@/components/Account/AccountHeader'
   import Container from '@/components/Container'
-  import AccountExchanger from '@/components/Account/AccountExchanger'
-  import AccountReceipt from '@/components/Account/AccountReceipt'
+  import AccountGettingStarted from '@/components/Account/AccountGettingStarted'
+  import AccountMyFunds from '@/components/Account/AccountMyFunds'
   import AccountFooter from '@/components/Account/AccountFooter'
 
   export default {
-    name: 'accountBuyAndSell',
+    name: 'accountDashboard',
     components: {
         AccountHeader,
         Container,
-        AccountExchanger,
-        AccountReceipt,
+        AccountGettingStarted,
+        AccountMyFunds,
         AccountFooter
     }
   }
@@ -43,11 +43,5 @@
     background-color: #F3F3F3;
   }
 
-  .container__page-account-buy-and-sell {
-    max-width: 920px;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
+  .container__page-account-dashboard {}
 </style>

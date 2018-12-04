@@ -16,7 +16,7 @@
 
 <style lang="scss">
     .button-component {
-        padding: 0 20px;
+        padding: 0 25px;
         height: 40px;
 
         border: none;
@@ -41,5 +41,14 @@
 
     .button-component--type-fluid {
         width: 100%;
+    }
+
+    .button-component--theme-gray {
+        color: #000000;
+        background-color: #ECECEC;
+
+        &:hover {
+            background-color: #cecece;
+        }
     }
 </style>

@@ -38,6 +38,9 @@
 <style lang="scss">
   .page__content {
     min-height: 100vh;
+
+    box-sizing: border-box;
+    padding-bottom: 100px;
   }
 
   .page__content--theme-account {
