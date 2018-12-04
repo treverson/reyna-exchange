@@ -4,6 +4,7 @@
       <AccountHeader />
       <Container class="container__page-account-buy-and-sell">
         <AccountExchanger />
+        <AccountReceipt />
       </Container>
       <AccountFooter />
     </div>
@@ -14,6 +15,7 @@
   import AccountHeader from '@/components/Account/AccountHeader'
   import Container from '@/components/Container'
   import AccountExchanger from '@/components/Account/AccountExchanger'
+  import AccountReceipt from '@/components/Account/AccountReceipt'
   import AccountFooter from '@/components/Account/AccountFooter'
 
   export default {
@@ -22,6 +24,7 @@
         AccountHeader,
         Container,
         AccountExchanger,
+        AccountReceipt,
         AccountFooter
     }
   }
@@ -37,5 +40,11 @@
     background-color: #F3F3F3;
   }
 
-  .container__page-account-buy-and-sell {}
+  .container__page-account-buy-and-sell {
+    max-width: 920px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 </style>

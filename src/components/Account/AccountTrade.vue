@@ -62,8 +62,6 @@
 </script>
 
 <style lang="scss">
-    .account-trade {}
-
     .account-trade__section {
         display: flex;
         align-items: flex-start;

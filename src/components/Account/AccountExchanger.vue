@@ -202,6 +202,8 @@
     .account-exchanger {
         max-width: 540px;
         width: 100%;
+
+        flex-shrink: 0;
     }
 
     .account-exchanger__header {
