@@ -316,7 +316,7 @@
         name: "AccountHistory",
         data () {
             return {
-                activeTab: 2
+                activeTab: 0
             }
         },
         methods: {

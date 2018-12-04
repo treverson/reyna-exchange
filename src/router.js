@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home'
-import AccountHistory from './views/AccountHistory'
+import Account from './views/Account/Account'
+import AccountProfile from './views/Account/AccountProfile'
+import AccountHistory from './views/Account/AccountHistory'
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
   routes: [
     {
       path: '/',
@@ -15,9 +15,21 @@ export default new Router({
       component: Home
     },
     {
-      path: '/account-history',
-      name: 'accountHistory',
-      component: AccountHistory
+      path: '/account',
+      name: 'account',
+      component: Account,
+      children: [
+          {
+              path: '',
+              name: 'accountProfile',
+              component: AccountProfile
+          },
+          {
+              path: 'history',
+              name: 'accountHistory',
+              component: AccountHistory
+          }
+      ]
     }
   ]
 })

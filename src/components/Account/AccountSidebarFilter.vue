@@ -14,10 +14,11 @@
         </div>
         <div v-show="showOnlyConstructor.length > 0" class="account-sidebar-filter__section">
             <label class="account-sidebar-filter__heading">Show only</label>
+            <!-- Show only -->
             <div v-for="item in showOnlyConstructor" v-bind:key="item.id" class="account-sidebar-filter__checkbox">
                 <input v-model="item.model" type="radio" name="show-only" :id="item.code" class="account-sidebar-filter__checkbox-hidden">
                 <label :for="item.code" class="account-sidebar-filter__checkbox-plate">{{ item.title }}</label>
-            </div>
+            </div><!-- end -->
         </div>
         <div class="account-sidebar-filter__section">
             <button class="account-sidebar-filter__button" @click="resetFilter()">Reset</button>

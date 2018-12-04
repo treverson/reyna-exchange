@@ -1,6 +1,6 @@
 <template>
     <header class="account-header">
-        <router-link to="#" class="account-header__logo">R</router-link>
+        <router-link to="/account" class="account-header__logo">R</router-link>
         <ul class="account-header__menu">
             <li class="account-header__item">
                 <router-link to="#" class="account-header__link"><span class="account-header__icon icon-icon-dashboard"></span> Dashboard</router-link>
@@ -12,7 +12,7 @@
                 <router-link to="#" class="account-header__link"><span class="account-header__icon icon-icon-advanced-view"></span> Advanced View</router-link>
             </li>
             <li class="account-header__item">
-                <router-link to="account-history" class="account-header__link"><span class="account-header__icon icon-icon-history"></span> History</router-link>
+                <router-link to="/account/history" class="account-header__link"><span class="account-header__icon icon-icon-history"></span> History</router-link>
             </li>
         </ul>
         <CurrencySwitcher class="account-header__currency-switcher" />
