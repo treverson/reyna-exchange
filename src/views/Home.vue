@@ -1,16 +1,17 @@
 <template>
   <transition name="fade" mode="out-in">
-    <div class="page__content">
+    <PageWrapper>
       <Header />
       <AboutProduct />
       <InformationCategory />
       <ProjectDashboard />
       <Footer />
-    </div>
+    </PageWrapper>
   </transition>
 </template>
 
 <script>
+  import PageWrapper from '@/components/PageWrapper'
   import Header from '@/components/Landing/Header'
   import AboutProduct from '@/components/Landing/AboutProduct'
   import InformationCategory from '@/components/Landing/InformationCategory'
@@ -20,6 +21,7 @@
   export default {
     name: 'home',
     components: {
+        PageWrapper,
         Header,
         AboutProduct,
         InformationCategory,

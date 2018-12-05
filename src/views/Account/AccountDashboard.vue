@@ -38,6 +38,9 @@
         AccountGettingStarted,
         AccountMyFunds,
         AccountFooter
+    },
+    data () {
+        return {}
     }
   }
 </script>
