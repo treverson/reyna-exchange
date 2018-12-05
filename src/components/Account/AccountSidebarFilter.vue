@@ -1,23 +1,27 @@
 <template>
     <div class="account-sidebar-filter">
         <div class="account-sidebar-filter__section">
-            <label for="side" class="account-sidebar-filter__heading">Side</label>
-            <div id="side" class="account-sidebar-filter__select">
-                <span class="account-sidebar-filter__select-current">All types</span>
-            </div>
+            <span class="account-sidebar-filter__heading">Side</span>
+            <MultipleSelect type="primary" :data="sideConstructor" />
         </div>
         <div class="account-sidebar-filter__section">
-            <label for="currencies" class="account-sidebar-filter__heading">Currency</label>
-            <select id="currencies" class="account-sidebar-filter__select">
-                <option value="0">All currencies</option>
-            </select>
+            <span class="account-sidebar-filter__heading">Currency</span>
+            <MultipleSelect type="multiple" :data="currencyConstructor" />
         </div>
         <div v-show="showOnlyConstructor.length > 0" class="account-sidebar-filter__section">
             <label class="account-sidebar-filter__heading">Show only</label>
             <!-- Show only -->
             <div v-for="item in showOnlyConstructor" v-bind:key="item.id" class="account-sidebar-filter__checkbox">
                 <input v-model="item.model" type="radio" name="show-only" :id="item.code" class="account-sidebar-filter__checkbox-hidden">
-                <label :for="item.code" class="account-sidebar-filter__checkbox-plate">{{ item.title }}</label>
+
+                <!-- checkbox -->
+                <label
+                    :for="item.code"
+                    class="account-sidebar-filter__checkbox-plate"
+                    @click="changeShowOnly(item.id)"
+                >{{ item.title }}</label>
+                <!-- end -->
+
             </div><!-- end -->
         </div>
         <div class="account-sidebar-filter__section">
@@ -28,8 +32,13 @@
 </template>
 
 <script>
+    import MultipleSelect from '@/components/MultipleSelect'
+
     export default {
         name: "AccountSidebarFilter",
+        components: {
+            MultipleSelect
+        },
         data () {
             return {
                 showSideConstructor: [
@@ -52,19 +61,79 @@
                         id: 0,
                         title: 'Last 30 days',
                         code: 'last-30-days',
-                        model: false
+                        state: false
                     },
                     {
                         id: 1,
                         title: 'Last 7 days',
                         code: 'last-7-days',
-                        model: false
+                        state: false
                     },
                     {
                         id: 2,
                         title: 'Last day',
                         code: 'last-day',
-                        model: false
+                        state: false
+                    }
+                ],
+                sideConstructor: [
+                    {
+                        id: 0,
+                        name: 'All types'
+                    },
+                    {
+                        id: 1,
+                        name: 'Withdraw'
+                    },
+                    {
+                        id: 2,
+                        name: 'Deposit'
+                    }
+                ],
+                currencyConstructor: [
+                    {
+                        id: 0,
+                        category: 'All currencies',
+                        content: [
+                            {
+                                id: 0,
+                                title: 'Tron'
+                            },
+                            {
+                                id: 1,
+                                title: 'Bitcoin'
+                            },
+                            {
+                                id: 2,
+                                title: 'Dice'
+                            },
+                            {
+                                id: 3,
+                                title: 'Dogecoin'
+                            }
+                        ]
+                    },
+                    {
+                        id: 1,
+                        category: 'Example',
+                        content: [
+                            {
+                                id: 4,
+                                title: 'Tron'
+                            },
+                            {
+                                id: 5,
+                                title: 'Bitcoin'
+                            },
+                            {
+                                id: 6,
+                                title: 'Dice'
+                            },
+                            {
+                                id: 7,
+                                title: 'Dogecoin'
+                            }
+                        ]
                     }
                 ]
             }

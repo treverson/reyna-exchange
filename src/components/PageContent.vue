@@ -24,4 +24,9 @@
             margin-bottom: 50px;
         }
     }
+
+    .page__history-table {
+        max-width: 824px;
+        width: 100%;
+    }
 </style>

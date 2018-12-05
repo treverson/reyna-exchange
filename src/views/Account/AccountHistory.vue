@@ -7,7 +7,7 @@
           <AccountHeading>History</AccountHeading>
         </Container>
         <Container class="container__page-account-history">
-          <AccountTableConstructor :content="tableData" />
+          <AccountTableConstructor :content="tableData" class="page__history-table" />
           <AccountSidebarFilter />
         </Container>
       </PageContent>
