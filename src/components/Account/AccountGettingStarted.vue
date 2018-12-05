@@ -40,7 +40,8 @@
 
 <style lang="scss">
     .account-getting-started {
-        max-width: 765px;
+        width: 795px;
+        flex-shrink: 0;
     }
 
     .account-getting-started__container {

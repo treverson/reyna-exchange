@@ -1,20 +1,24 @@
 <template>
   <transition name="fade" mode="out-in">
-    <div class="page__content page__content--theme-account">
+    <PageWrapper theme="account">
       <AccountHeader />
-      <Container>
-        <AccountHeading>History</AccountHeading>
-      </Container>
-      <Container class="container__page-account-history">
-        <AccountHistory />
-        <AccountSidebarFilter />
-      </Container>
+      <PageContent>
+        <Container>
+          <AccountHeading>History</AccountHeading>
+        </Container>
+        <Container class="container__page-account-history">
+          <AccountHistory />
+          <AccountSidebarFilter />
+        </Container>
+      </PageContent>
       <AccountFooter />
-    </div>
+    </PageWrapper>
   </transition>
 </template>
 
 <script>
+  import PageWrapper from '@/components/PageWrapper'
+  import PageContent from '@/components/PageContent'
   import AccountHeader from '@/components/Account/AccountHeader'
   import Container from '@/components/Container'
   import AccountHeading from '@/components/Account/AccountHeading'
@@ -25,6 +29,8 @@
   export default {
     name: 'accountHistory',
     components: {
+        PageWrapper,
+        PageContent,
         AccountHeader,
         Container,
         AccountHeading,
@@ -36,18 +42,6 @@
 </script>
 
 <style lang="scss">
-  .page__content {
-    min-height: 100vh;
-
-    box-sizing: border-box;
-    padding-bottom: 100px;
-  }
-
-  .page__content--theme-account {
-    overflow: hidden;
-    background-color: #F3F3F3;
-  }
-
   .container__page-account-history {
     display: flex;
     align-items: flex-start;

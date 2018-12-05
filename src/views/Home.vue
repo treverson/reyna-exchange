@@ -30,7 +30,5 @@
 </script>
 
 <style lang="scss">
-  .page__content {
-    min-height: 100vh;
-  }
+
 </style>

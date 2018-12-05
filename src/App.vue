@@ -1,5 +1,5 @@
 <template>
-  <div id="page">
+  <div id="app">
     <router-view />
   </div>
 </template>
@@ -11,15 +11,22 @@
       min-height: 100%;
   }
 
-  #page {
-      font: 13px "SF UI Display", "SF UI Display Fixed", sans-serif;
-      line-height: 1.5;
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
 
-      min-height: 100%;
-      margin: 0;
+  #app {
+    font: 13px "SF UI Display", "SF UI Display Fixed", sans-serif;
+    line-height: 1.5;
 
-      color: #262626;
-      background: #fff;
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+
+    color: #262626;
+    background: #fff;
   }
 
   .fade-enter-active,

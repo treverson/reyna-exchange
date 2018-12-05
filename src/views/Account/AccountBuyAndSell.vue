@@ -1,17 +1,21 @@
 <template>
   <transition name="fade" mode="out-in">
-    <div class="page__content page__content--theme-account">
+    <PageWrapper theme="account">
       <AccountHeader />
-      <Container class="container__page-account-buy-and-sell">
-        <AccountExchanger />
-        <AccountReceipt />
-      </Container>
+      <PageContent>
+        <Container class="container__page-account-buy-and-sell">
+          <AccountExchanger />
+          <AccountReceipt />
+        </Container>
+      </PageContent>
       <AccountFooter />
-    </div>
+    </PageWrapper>
   </transition>
 </template>
 
 <script>
+  import PageWrapper from '@/components/PageWrapper'
+  import PageContent from '@/components/PageContent'
   import AccountHeader from '@/components/Account/AccountHeader'
   import Container from '@/components/Container'
   import AccountExchanger from '@/components/Account/AccountExchanger'
@@ -21,6 +25,8 @@
   export default {
     name: 'accountBuyAndSell',
     components: {
+        PageWrapper,
+        PageContent,
         AccountHeader,
         Container,
         AccountExchanger,
@@ -31,18 +37,6 @@
 </script>
 
 <style lang="scss">
-  .page__content {
-    min-height: 100vh;
-
-    box-sizing: border-box;
-    padding-bottom: 100px;
-  }
-
-  .page__content--theme-account {
-    overflow: hidden;
-    background-color: #F3F3F3;
-  }
-
   .container__page-account-buy-and-sell {
     max-width: 920px;
 

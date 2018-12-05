@@ -81,6 +81,8 @@
     .account-my-funds {
         max-width: 285px;
         width: 100%;
+
+        flex-shrink: 0;
     }
 
     .account-my-funds__container {

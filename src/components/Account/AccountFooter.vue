@@ -19,7 +19,7 @@
 
 <style lang="scss">
     .account-footer {
-        position: fixed;
+        position: absolute;
 
         bottom: 0;
 

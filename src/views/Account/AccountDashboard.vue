@@ -1,17 +1,27 @@
 <template>
   <transition name="fade" mode="out-in">
-    <div class="page__content page__content--theme-account">
+    <PageWrapper theme="account">
       <AccountHeader />
-      <Container class="container__page-account-dashboard">
-        <AccountGettingStarted />
-        <AccountMyFunds />
-      </Container>
+      <PageContent>
+        <Container class="container__account-dashboard">
+          <AccountMyFunds />
+          <main class="page__wrapper">
+            <div class="page__section">
+              <AccountGettingStarted />
+            </div>
+            <div class="page__section">
+            </div>
+          </main>
+        </Container>
+      </PageContent>
       <AccountFooter />
-    </div>
+    </PageWrapper>
   </transition>
 </template>
 
 <script>
+  import PageWrapper from '@/components/PageWrapper'
+  import PageContent from '@/components/PageContent'
   import AccountHeader from '@/components/Account/AccountHeader'
   import Container from '@/components/Container'
   import AccountGettingStarted from '@/components/Account/AccountGettingStarted'
@@ -21,6 +31,8 @@
   export default {
     name: 'accountDashboard',
     components: {
+        PageWrapper,
+        PageContent,
         AccountHeader,
         Container,
         AccountGettingStarted,
@@ -31,17 +43,9 @@
 </script>
 
 <style lang="scss">
-  .page__content {
-    min-height: 100vh;
-
-    box-sizing: border-box;
-    padding-bottom: 100px;
+  .container__account-dashboard {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
   }
-
-  .page__content--theme-account {
-    overflow: hidden;
-    background-color: #F3F3F3;
-  }
-
-  .container__page-account-dashboard {}
 </style>
