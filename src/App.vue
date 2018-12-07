@@ -5,10 +5,9 @@
 </template>
 
 <style lang="scss">
-  @import "./assets/style/include-fonts";
-  @import "./assets/style/include-icons";
+  @import "./assets/style/autoload";
 
   html {
-      min-height: 100%;
+    min-height: 100%;
   }
 </style>

@@ -91,12 +91,12 @@
 
     .getting-start__icon--type-arrow {
         background-position: calc(50% + 1px) center;
-        background-image: url('../../assets/img/icons/getting-start-arrow.svg');
+        background-image: url('../../../assets/img/icons/getting-start-arrow.svg');
     }
 
     .getting-start__icon--type-advanced {
         background-size: 40%;
-        background-image: url('../../assets/img/icons/getting-start-advanced.svg');
+        background-image: url('../../../assets/img/icons/getting-start-advanced.svg');
     }
 
     .getting-start__heading {

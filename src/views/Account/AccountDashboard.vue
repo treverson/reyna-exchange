@@ -12,6 +12,12 @@
             </div>
             <!-- getting start end -->
 
+            <!-- available-currencies -->
+            <div class="account-dashboard__available-currencies">
+              <AvailableCurrencies />
+            </div>
+            <!-- available-currencies end -->
+
           </div>
         </AccountContainer>
 
@@ -25,7 +31,8 @@
   import Header from '@/components/Account/Header'
   import Footer from '@/components/Account/Footer'
   import AccountContainer from '@/components/Account/AccountContainer'
-  import GettingStart from '@/components/Account/GettingStart'
+  import GettingStart from '@/components/Account/UI/GettingStart'
+  import AvailableCurrencies from '@/components/Account/UI/AvailableCurrencies'
 
   export default {
     name: 'accountDashboard',
@@ -34,11 +41,31 @@
         Header,
         Footer,
         AccountContainer,
-        GettingStart
+        GettingStart,
+        AvailableCurrencies
     }
   }
 </script>
 
 <style lang="scss">
+  .account-dashboard__grid {
+    margin-top: 13px;
 
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .account-dashboard__getting-start {
+    flex-shrink: 0;
+    max-width: 256px;
+    width: 100%;
+
+    margin-right: 17px;
+  }
+
+  .account-dashboard__available-currencies {
+    flex-shrink: 0;
+    max-width: 712px;
+    width: 100%;
+  }
 </style>
