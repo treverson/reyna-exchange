@@ -6,7 +6,7 @@
 
 <script>
     export default {
-        name: "PageWrapper",
+        name: "Page",
         props: {
             theme: {
                 type: String
@@ -25,12 +25,19 @@
 
 <style lang="scss">
     .page {
-        padding: 0;
+        font: 13px "SF UI Display", "SF UI Display Fixed", sans-serif;
+        line-height: 1.5;
+
         position: relative;
         min-height: 100vh;
+        margin: 0;
+
+        color: #262626;
+        background: #fff;
     }
 
+
     .page--theme-account {
-        background-color: #F3F3F3;
+        background-color: #F5EBEB;
     }
 </style>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 12.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f65555;
+        opacity: 0.2;
+      }
+    </style>
+  </defs>
+  <g id="Group_113" data-name="Group 113" transform="translate(-115 -558.5)">
+    <path id="Shape" class="cls-1" d="M0,0,2.5,3.6,5,0Z" transform="translate(120 562.1) rotate(180)"/>
+    <path id="Shape-2" data-name="Shape" class="cls-1" d="M0,0,2.5,3.6,5,0Z" transform="translate(115 567.1)"/>
+  </g>
+</svg>
