@@ -18,6 +18,12 @@
             </div>
             <!-- available-currencies end -->
 
+            <!-- my funds -->
+            <div class="account-dashboard__my-funds">
+              <MyFunds />
+            </div>
+            <!-- my funds end -->
+
           </div>
         </AccountContainer>
 
@@ -33,6 +39,7 @@
   import AccountContainer from '@/components/Account/AccountContainer'
   import GettingStart from '@/components/Account/UI/GettingStart'
   import AvailableCurrencies from '@/components/Account/UI/AvailableCurrencies'
+  import MyFunds from '@/components/Account/UI/MyFunds'
 
   export default {
     name: 'accountDashboard',
@@ -42,7 +49,8 @@
         Footer,
         AccountContainer,
         GettingStart,
-        AvailableCurrencies
+        AvailableCurrencies,
+        MyFunds
     }
   }
 </script>
@@ -66,6 +74,14 @@
   .account-dashboard__available-currencies {
     flex-shrink: 0;
     max-width: 712px;
+    width: 100%;
+
+    margin-right: 16px;
+  }
+
+  .account-dashboard__my-funds {
+    flex-shrink: 0;
+    max-width: 256px;
     width: 100%;
   }
 </style>
