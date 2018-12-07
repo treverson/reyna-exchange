@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.861 19.891">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f65454;
+      }
+    </style>
+  </defs>
+  <g id="_03_Advanced_View" data-name="03 Advanced View" transform="translate(-0.01)">
+    <g id="Layer_1" data-name="Layer 1" transform="translate(0.01 0)">
+      <rect id="Rectangle_42" data-name="Rectangle 42" class="cls-1" width="5.21" height="4.38" transform="translate(4.38 14.68) rotate(90)"/>
+      <rect id="Rectangle_43" data-name="Rectangle 43" class="cls-1" width="9.9" height="4.38" transform="translate(12.12 9.98) rotate(90)"/>
+      <rect id="Rectangle_44" data-name="Rectangle 44" class="cls-1" width="19.891" height="4.38" transform="translate(19.861) rotate(90)"/>
+    </g>
+  </g>
+</svg>
