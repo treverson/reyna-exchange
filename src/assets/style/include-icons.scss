@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-good:before {
+  content: "\e907";
+}
 .icon-advanced-view:before {
   content: "\e900";
 }

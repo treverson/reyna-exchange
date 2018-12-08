@@ -111,7 +111,7 @@
     .account-header__link {
         height: 100%;
 
-        padding: 0 15px;
+        padding: 0 28px;
 
         display: flex;
         align-items: center;
@@ -125,10 +125,15 @@
         &.router-link-active {
             color: #fff;
             background-color: #F65454;
+
+            .account-header__icon {
+                color: #fff;
+            }
         }
     }
 
     .account-header__icon {
+        color: #D3D3D3;
         font-size: 10px;
         margin-right: 10px;
     }
