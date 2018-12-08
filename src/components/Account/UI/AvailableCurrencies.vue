@@ -24,7 +24,7 @@
 
             </ul>
             <div class="available-currencies__search">
-                <input type="text" placeholder="Search for currency" class="available-currencies__field">
+                <input type="text" placeholder="Search for currency" v-model="fieldModel" class="available-currencies__field">
             </div>
         </div>
 
@@ -65,7 +65,7 @@
 
                         <!-- row -->
                         <tr
-                                v-for="row in item.rows"
+                                v-for="row in filteredTableList"
                                 v-bind:key="row.id"
                                 class="available-currencies__row"
                         >
@@ -139,6 +139,7 @@
         data () {
             return {
                 currentTableItem: 0,
+                fieldModel: '',
                 tableData: [
                     {
                         id: 0,
@@ -254,7 +255,7 @@
                                 ]
                             },
                             {
-                                id: 2,
+                                id: 3,
                                 content: [
                                     {
                                         id: 0,
@@ -281,7 +282,7 @@
                                 ]
                             },
                             {
-                                id: 3,
+                                id: 4,
                                 content: [
                                     {
                                         id: 0,
@@ -308,7 +309,7 @@
                                 ]
                             },
                             {
-                                id: 4,
+                                id: 5,
                                 content: [
                                     {
                                         id: 0,
@@ -335,7 +336,7 @@
                                 ]
                             },
                             {
-                                id: 5,
+                                id: 6,
                                 content: [
                                     {
                                         id: 0,
@@ -362,7 +363,7 @@
                                 ]
                             },
                             {
-                                id: 6,
+                                id: 7,
                                 content: [
                                     {
                                         id: 0,
@@ -389,7 +390,7 @@
                                 ]
                             },
                             {
-                                id: 7,
+                                id: 8,
                                 content: [
                                     {
                                         id: 0,
@@ -416,7 +417,7 @@
                                 ]
                             },
                             {
-                                id: 8,
+                                id: 9,
                                 content: [
                                     {
                                         id: 0,
@@ -443,7 +444,7 @@
                                 ]
                             },
                             {
-                                id: 9,
+                                id: 10,
                                 content: [
                                     {
                                         id: 0,
@@ -509,7 +510,7 @@
                                     {
                                         id: 0,
                                         type: 'currency',
-                                        title: 'dice1'
+                                        title: 'diceTop'
                                     },
                                     {
                                         id: 1,
@@ -585,7 +586,7 @@
                                 ]
                             },
                             {
-                                id: 2,
+                                id: 3,
                                 content: [
                                     {
                                         id: 0,
@@ -612,7 +613,7 @@
                                 ]
                             },
                             {
-                                id: 3,
+                                id: 4,
                                 content: [
                                     {
                                         id: 0,
@@ -639,7 +640,7 @@
                                 ]
                             },
                             {
-                                id: 4,
+                                id: 5,
                                 content: [
                                     {
                                         id: 0,
@@ -666,7 +667,7 @@
                                 ]
                             },
                             {
-                                id: 5,
+                                id: 6,
                                 content: [
                                     {
                                         id: 0,
@@ -693,7 +694,7 @@
                                 ]
                             },
                             {
-                                id: 6,
+                                id: 7,
                                 content: [
                                     {
                                         id: 0,
@@ -720,7 +721,7 @@
                                 ]
                             },
                             {
-                                id: 7,
+                                id: 8,
                                 content: [
                                     {
                                         id: 0,
@@ -747,7 +748,7 @@
                                 ]
                             },
                             {
-                                id: 8,
+                                id: 9,
                                 content: [
                                     {
                                         id: 0,
@@ -774,7 +775,7 @@
                                 ]
                             },
                             {
-                                id: 9,
+                                id: 10,
                                 content: [
                                     {
                                         id: 0,
@@ -840,7 +841,7 @@
                                     {
                                         id: 0,
                                         type: 'currency',
-                                        title: 'dice2'
+                                        title: 'dice'
                                     },
                                     {
                                         id: 1,
@@ -916,7 +917,7 @@
                                 ]
                             },
                             {
-                                id: 2,
+                                id: 3,
                                 content: [
                                     {
                                         id: 0,
@@ -943,7 +944,7 @@
                                 ]
                             },
                             {
-                                id: 3,
+                                id: 4,
                                 content: [
                                     {
                                         id: 0,
@@ -970,7 +971,7 @@
                                 ]
                             },
                             {
-                                id: 4,
+                                id: 5,
                                 content: [
                                     {
                                         id: 0,
@@ -997,7 +998,7 @@
                                 ]
                             },
                             {
-                                id: 5,
+                                id: 6,
                                 content: [
                                     {
                                         id: 0,
@@ -1024,7 +1025,7 @@
                                 ]
                             },
                             {
-                                id: 6,
+                                id: 7,
                                 content: [
                                     {
                                         id: 0,
@@ -1051,7 +1052,7 @@
                                 ]
                             },
                             {
-                                id: 7,
+                                id: 8,
                                 content: [
                                     {
                                         id: 0,
@@ -1078,7 +1079,7 @@
                                 ]
                             },
                             {
-                                id: 8,
+                                id: 9,
                                 content: [
                                     {
                                         id: 0,
@@ -1105,7 +1106,7 @@
                                 ]
                             },
                             {
-                                id: 9,
+                                id: 10,
                                 content: [
                                     {
                                         id: 0,
@@ -1171,7 +1172,7 @@
                                     {
                                         id: 0,
                                         type: 'currency',
-                                        title: 'dice3'
+                                        title: 'dice'
                                     },
                                     {
                                         id: 1,
@@ -1247,7 +1248,7 @@
                                 ]
                             },
                             {
-                                id: 2,
+                                id: 3,
                                 content: [
                                     {
                                         id: 0,
@@ -1274,7 +1275,7 @@
                                 ]
                             },
                             {
-                                id: 3,
+                                id: 4,
                                 content: [
                                     {
                                         id: 0,
@@ -1301,7 +1302,7 @@
                                 ]
                             },
                             {
-                                id: 4,
+                                id: 5,
                                 content: [
                                     {
                                         id: 0,
@@ -1328,7 +1329,7 @@
                                 ]
                             },
                             {
-                                id: 5,
+                                id: 6,
                                 content: [
                                     {
                                         id: 0,
@@ -1355,7 +1356,7 @@
                                 ]
                             },
                             {
-                                id: 6,
+                                id: 7,
                                 content: [
                                     {
                                         id: 0,
@@ -1382,7 +1383,7 @@
                                 ]
                             },
                             {
-                                id: 7,
+                                id: 8,
                                 content: [
                                     {
                                         id: 0,
@@ -1409,7 +1410,7 @@
                                 ]
                             },
                             {
-                                id: 8,
+                                id: 9,
                                 content: [
                                     {
                                         id: 0,
@@ -1436,7 +1437,7 @@
                                 ]
                             },
                             {
-                                id: 9,
+                                id: 10,
                                 content: [
                                     {
                                         id: 0,
@@ -1470,6 +1471,34 @@
         methods: {
             changeCurrentTableItem: function (id) {
                 this.currentTableItem = id
+            }
+        },
+        computed: {
+
+            /*
+             * Фильтрация таблицы по поиску валюты
+             */
+            filteredTableList: function () {
+
+                let result = []
+                let searchData = this.fieldModel
+                let currentData = this.tableData[this.currentTableItem].rows
+
+                if (searchData !== '') { // если в строке поиска что-то есть
+                    currentData.filter(function (element) {
+                        element.content.filter(function (item) {
+                            if (item.type === 'currency' && item.title.toLowerCase() === searchData.toLowerCase()) {
+                                result.push(element)
+                            }
+                        })
+                    })
+                } else { // Если строка поиска пуста
+                    currentData.filter(function (element) {
+                        result.push(element)
+                    })
+                }
+
+                return result
             }
         }
     }
