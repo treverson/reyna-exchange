@@ -3,11 +3,18 @@
   "content": [
     {
       "id": 0,
-      "title": "USD"
+      "code": "AFN",
+      "title": "Afghan Afghani"
     },
     {
       "id": 1,
-      "title": "RUB"
+      "code": "ANG",
+      "title": "Netherlands Antillean"
+    },
+    {
+      "id": 2,
+      "code": "ARS",
+      "title": "Argentine Peso"
     }
   ]
 }

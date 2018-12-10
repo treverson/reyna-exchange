@@ -6,12 +6,6 @@
         <AccountContainer>
           <div class="account-buy-and-sell__grid">
 
-            <!-- getting start -->
-            <div class="account-buy-and-sell__getting-start">
-              <GettingStart />
-            </div>
-            <!-- getting start end -->
-
             <!-- available-currencies -->
             <div class="account-buy-and-sell__available-currencies">
               <AvailableCurrencies table-name="Available currencies" :current-item="0" :table-data="tableData" />
@@ -43,7 +37,6 @@
   import Header from '@/components/Account/Header'
   import Footer from '@/components/Account/Footer'
   import AccountContainer from '@/components/Account/AccountContainer'
-  import GettingStart from '@/components/Account/UI/GettingStart'
   import AvailableCurrencies from '@/components/Account/UI/AvailableCurrencies'
   import TradeAmount from '@/components/Account/UI/TradeAmount'
   import TradeDetails from '@/components/Account/UI/TradeDetails'
@@ -55,7 +48,6 @@
         Header,
         Footer,
         AccountContainer,
-        GettingStart,
         AvailableCurrencies,
         TradeAmount,
         TradeDetails
@@ -297,17 +289,9 @@
     align-items: flex-start;
   }
 
-  .account-buy-and-sell__getting-start {
-    flex-shrink: 0;
-    max-width: 256px;
-    width: 100%;
-    margin-right: 17px;
-
-  }
-
   .account-buy-and-sell__available-currencies {
     flex-shrink: 0;
-    max-width: 438px;
+    max-width: 711px;
     width: 100%;
 
     margin-right: 17px;

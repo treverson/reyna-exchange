@@ -103,6 +103,30 @@
                                         </span>
                                     </div>
                                 </template>
+                                <template v-else-if="bodyItem.type === 'type'">
+                                    <div class="available-currencies__table-type">
+                                        <template v-if="bodyItem.isSale === true">
+                                            <span class="available-currencies__table-type-content available-currencies__table-type-content--state-sell">Sell</span>
+                                        </template>
+                                        <template v-else-if="bodyItem.isSale === false">
+                                            <span class="available-currencies__table-type-content available-currencies__table-type-content--state-buy">Buy</span>
+                                        </template>
+                                    </div>
+                                </template>
+                                <template v-else-if="bodyItem.type === 'date'">
+                                    <div class="available-currencies__table-date">
+                                        <span class="available-currencies__table-date-content">
+                                            {{ bodyItem.content }}
+                                        </span>
+                                    </div>
+                                </template>
+                                <template v-else-if="bodyItem.type === 'cryptoCurrency'">
+                                    <div class="available-currencies__table-crypto-currency" :style="{ textAlign: bodyItem.align }">
+                                        <span class="available-currencies__table-crypto-currency-content">
+                                            {{ bodyItem.content }} <span>{{ bodyItem.currencyType }}</span>
+                                        </span>
+                                    </div>
+                                </template>
                             </th>
                             <!-- item end -->
 
@@ -200,7 +224,6 @@
 
 <style lang="scss">
     .available-currencies {
-        max-width: 712px;
         width: 100%;
     }
 
@@ -268,6 +291,13 @@
         line-height: 14px;
         letter-spacing: .3px;
         text-transform: uppercase;
+
+        transition: .15s ease;
+
+        &:hover:not(.available-currencies__button--isCurrent-yes),
+        &:focus:not(.available-currencies__button--isCurrent-yes) {
+            background-color: #FFECEC;
+        }
     }
 
     .available-currencies__button--isCurrent-yes {
@@ -311,7 +341,12 @@
 
         outline: none;
 
+        transition: .15s ease;
+
         &:focus {
+            color: rgba(32, 32, 32, 0.8);
+            background-color: #F5EBEB;
+
             &::placeholder {
                 opacity: 0;
             }
@@ -474,14 +509,28 @@
 
         outline: none;
         cursor: pointer;
+
+        transition: .15s ease;
     }
 
     .available-currencies__table-action--type-buy {
         border-color: #2ED44D;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: #2ED44D;
+        }
     }
 
     .available-currencies__table-action--type-sell {
         border-color: #F65454;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: #F65454;
+        }
     }
 
     .available-currencies__table-comparison {
@@ -491,7 +540,14 @@
         outline: none;
         cursor: pointer;
 
+        transition: .15s ease;
+
         color: rgba(12, 63, 183, 0.6);
+
+        &:hover,
+        &:focus {
+            color: #0C3FB7;
+        }
     }
 
     .available-currencies__row--isSelectable-yes {
@@ -521,6 +577,55 @@
                 color: #fff;
                 font-size: 7px;
             }
+        }
+    }
+
+    .available-currencies__table-type {
+        text-align: left;
+    }
+
+    .available-currencies__table-type-content {
+        color: #000000;
+        font-size: 10px;
+        line-height: 18px;
+
+        display: inline-block;
+        padding: 0 6px;
+
+        border-radius: 2px;
+    }
+
+    .available-currencies__table-type-content--state-sell {
+        background-color: #FBDBDB;
+    }
+
+    .available-currencies__table-type-content--state-buy {
+        background-color: #BFE4C6;
+    }
+
+    .available-currencies__table-date {
+        text-align: left;
+    }
+
+    .available-currencies__table-date-content {
+        color: rgba(0, 0, 0, 0.85);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14px;
+    }
+
+    .available-currencies__table-crypto-currency {
+        text-align: left;
+    }
+
+    .available-currencies__table-crypto-currency-content {
+        color: #000;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: normal;
+
+        span {
+            font-weight: bold;
         }
     }
 </style>

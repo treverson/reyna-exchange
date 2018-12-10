@@ -179,6 +179,14 @@
 
         border-radius: 2px;
         background-color: #FFCBCB;
+
+        transition: .15s ease;
+
+        &:hover,
+        &:focus {
+            color: rgba(255, 255, 255, 0.7);
+            background-color: #F65454;
+        }
     }
 
     .account-funds__button {
@@ -196,5 +204,12 @@
         font-weight: 500;
 
         height: 37px;
+
+        transition: .15s ease;
+
+        &:hover,
+        &:focus {
+            background-color: #FFCBCB;
+        }
     }
 </style>

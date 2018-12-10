@@ -1,12 +1,18 @@
 <template>
     <footer class="account-footer">
         <span class="account-footer__copyright">© 2018-2019 ReynaExchange. All rights reserved</span>
+        <LangSwitcher class="account-footer__lang" />
     </footer>
 </template>
 
 <script>
+    import LangSwitcher from '@/components/Account/UI/LangSwitcher'
+
     export default {
-        name: "Footer"
+        name: "Footer",
+        components: {
+            LangSwitcher
+        }
     }
 </script>
 
@@ -34,6 +40,10 @@
         color: rgba(139, 47, 47, 0.5);
         font-size: 10px;
         line-height: 12px;
+    }
+
+    .account-footer__lang {
+        margin-left: auto;
     }
 </style>
 

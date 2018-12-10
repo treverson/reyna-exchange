@@ -6,6 +6,7 @@ import Home from './views/Home'
 import AccountEntryPoint from './views/Account/AccountEntryPoint'
 import AccountDashboard from './views/Account/AccountDashboard'
 import AccountBuyAndSell from './views/Account/AccountBuyAndSell'
+import AccountHistory from './views/Account/AccountHistory'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
               path: 'buy-and-sell',
               name: 'accountBuyAndSell',
               component: AccountBuyAndSell
+          },
+          {
+              path: 'history',
+              name: 'accountHistory',
+              component: AccountHistory
           }
       ]
     }

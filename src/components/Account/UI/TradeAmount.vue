@@ -121,12 +121,16 @@
         font-size: 12px;
         font-weight: 500;
 
+        transition: .15s ease;
+
         -moz-appearance: textfield;
         &::-webkit-inner-spin-button {
             display: none;
         }
 
         &:focus {
+            border-color: #000000;
+
             &::placeholder {
                 opacity: 0;
             }

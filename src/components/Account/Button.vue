@@ -43,13 +43,25 @@
         line-height: 37px;
 
         border-radius: 2px;
+
+        transition: .15s ease;
     }
 
     .account-button--theme-green {
         background-color: #2ED44D;
+
+        &:hover,
+        &:focus {
+            background-color: #10AC2D;
+        }
     }
 
     .account-button--theme-red {
         background-color: #F65454;
+
+        &:hover,
+        &:focus {
+            background-color: #D11A1A;
+        }
     }
 </style>

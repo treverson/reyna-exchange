@@ -19,7 +19,7 @@
                 <span class="trade-details__section-title">Summary payment</span>
                 <span class="trade-details__section-content trade-details__result-price">1998.00 USD</span>
             </div>
-            <Button theme="green" class="trade-details__button">Buy TRX</Button>
+            <Button to="/account" theme="green" class="trade-details__button">Buy TRX</Button>
         </div>
     </div>
 </template>

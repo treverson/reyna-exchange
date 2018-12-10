@@ -16,15 +16,29 @@
             </li>
         </ul>
         <DropDownList :data="AvailableCurrencies" class="account-header__currency" />
-        <div class="account-header__profile">
+
+        <!-- profile -->
+        <div :class="{ 'account-header__profile': true, 'account-header__profile--isActionActive-yes': isActionsActive === true }">
+
             <router-link to="/account/profile" class="account-header__user">
                 <span class="account-header__username">Georg P.</span>
                 <img :src="avatarUrl" alt="" class="account-header__avatar">
             </router-link>
-            <button class="account-header__action">
+
+            <button class="account-header__action" @click="changeActionActive()">
                 <span class="icon-heavy-arrow-down"></span>
             </button>
+
+            <!-- actions -->
+            <div class="account-header__actions">
+                <router-link to="/account/settings" class="account-header__account-action">Settings</router-link>
+                <router-link to="/account/log-out" class="account-header__account-action">Log out</router-link>
+            </div>
+            <!-- actions end -->
+
         </div>
+        <!-- profile end -->
+
     </header>
 </template>
 
@@ -39,8 +53,14 @@
         },
         data () {
             return {
+                isActionsActive: false,
                 AvailableCurrencies: DropDownAvailableCurrencies,
                 avatarUrl: 'https://pp.userapi.com/c830308/v830308045/13f4f6/RwaDj5qlQwQ.jpg?ava=1'
+            }
+        },
+        methods: {
+            changeActionActive: function () {
+                this.isActionsActive = !this.isActionsActive
             }
         }
     }
@@ -85,11 +105,10 @@
             display: inline-block;
 
             border-radius: 50%;
-            background-size: 39%;
-            background-image: url('../../assets/img/reyna-logo.svg');
+            background-size: 100%;
+            background-image: url('../../assets/img/icon_reyna.svg');
             background-repeat: no-repeat;
             background-position: calc(50% + 1px) center;
-            background-color: #F65454;
         }
     }
 
@@ -121,6 +140,9 @@
         font-weight: 500;
         line-height: 16px;
         text-decoration: none;
+        outline: none;
+
+        transition: .15s ease;
 
         &.router-link-active {
             color: #fff;
@@ -130,12 +152,23 @@
                 color: #fff;
             }
         }
+
+        &:hover:not(.router-link-active),
+        &:focus:not(.router-link-active) {
+            background-color: #FFECEC;
+
+            .account-header__icon {
+                color: rgba(0, 0, 0, 0.7);
+            }
+        }
     }
 
     .account-header__icon {
         color: #D3D3D3;
         font-size: 10px;
         margin-right: 10px;
+
+        transition: .15s ease;
     }
 
     .account-header__currency {
@@ -144,7 +177,11 @@
     }
 
     .account-header__profile {
+        padding: 10.5px 9px 12px 18px;
+        transition: .15s ease;
+
         display: flex;
+        position: relative;
     }
 
     .account-header__user {
@@ -179,11 +216,75 @@
 
         color: rgba(0, 0, 0, 0.7);
 
+        transition: .20s ease;
+
         span {
             position: relative;
             top: 2px;
 
             font-size: 12px;
+        }
+    }
+
+    .account-header__actions {
+        width: 100%;
+
+        padding: 5px 0;
+
+        position: absolute;
+        top: 43px;
+
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 3px;
+
+        background-color: #fff;
+
+        visibility: hidden;
+        opacity: 0;
+
+        transition: .15s ease;
+    }
+
+    .account-header__account-action {
+        width: 100%;
+
+        padding: 10px 20px;
+        box-sizing: border-box;
+
+        outline: none;
+        cursor: pointer;
+
+        color: #000;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14px;
+        text-decoration: none;
+
+        transition: .15s ease;
+
+        &:hover,
+        &:focus {
+            background-color: #F5EBEB;
+        }
+
+    }
+
+    .account-header__profile--isActionActive-yes {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
+
+        .account-header__actions {
+            visibility: visible;
+            opacity: 1;
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
+        }
+
+        .account-header__action {
+            transform: rotate(180deg);
         }
     }
 </style>
