@@ -39,7 +39,7 @@
 
 <script>
     import HeadingSection from '@/components/Landing/HeadingSection'
-    import Container from '@/components/Container'
+    import Container from '@/components/Core/Container/Container'
     import IconSection from '@/components/Landing/IconSection'
 
     export default {

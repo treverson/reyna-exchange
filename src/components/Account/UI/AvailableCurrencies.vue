@@ -67,7 +67,8 @@
                         <tr
                                 v-for="row in filteredTableList"
                                 v-bind:key="row.id"
-                                :class="{ 'available-currencies__row': true, 'available-currencies__row--isSelectable-yes': item.isSelectable === true, 'available-currencies__row--isSelected-yes': row.selected === true }"
+                                @click="setRowSelectable(row.id)"
+                                :class="{ 'available-currencies__row': true, 'available-currencies__row--isSelectable-yes': item.isSelectable === true, 'available-currencies__row--isSelected-yes': true, 'available-currencies__row--isSelected-yes': row.selected === true }"
                         >
 
                             <!-- item -->
@@ -77,6 +78,20 @@
                                     :style="{ textAlign: bodyItem.align }"
                                     class="available-currencies__column available-currencies__table-item"
                             >
+                                <template v-if="bodyItem.type === 'default'">
+                                    <span class="available-currencies__table-title">{{ bodyItem.title }}</span>
+                                </template>
+                                <template v-if="bodyItem.type === 'status'">
+                                    <div class="available-currencies__table-status">
+                                        <span
+                                                :class="{ 'available-currencies__table-status-title': true, 'available-currencies__table-status-title--status-close': bodyItem.status === 0, 'available-currencies__table-status-title--status-open': bodyItem.status === 1, 'available-currencies__table-status-title--status-pending': bodyItem.status === 2}"
+                                        >
+                                            <template v-if="bodyItem.status === 0">Close</template>
+                                            <template v-else-if="bodyItem.status === 1">Open</template>
+                                            <template v-else-if="bodyItem.status === 2">Pending</template>
+                                        </span>
+                                    </div>
+                                </template>
                                 <template v-if="bodyItem.type === 'currency'">
                                     <div class="available-currencies__table-currency">
                                         <div class="available-currencies__table-currency-icon"></div>
@@ -189,7 +204,24 @@
         methods: {
             changeCurrentTableItem: function (id) {
                 this.currentTableItem = id
+            },
+            setRowSelectable: function (id) {
+                this.tableData[this.currentTableItem].rows[id].selected = !this.tableData[this.currentTableItem].rows[id].selected
+            },
+            autoload: function () {
+                this.tableData.forEach(function (element) {
+                    if (element.isSelectable === true) {
+
+                        element.rows.forEach(function (row) {
+                            row.selected = false
+                        })
+
+                    }
+                })
             }
+        },
+        mounted () {
+            this.autoload()
         },
         computed: {
 
@@ -205,7 +237,7 @@
                 if (searchData !== '') { // если в строке поиска что-то есть
                     currentData.filter(function (element) {
                         element.content.filter(function (item) {
-                            if (item.type === 'currency' && item.title.toLowerCase() === searchData.toLowerCase()) {
+                            if (item.type === 'currency' && item.title.toLowerCase().includes(searchData.toLowerCase())) {
                                 result.push(element)
                             }
                         })
@@ -627,5 +659,38 @@
         span {
             font-weight: bold;
         }
+    }
+
+    .available-currencies__table-title {
+        color: #000;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .available-currencies__table-status {
+        display: inline-block;
+    }
+
+    .available-currencies__table-status-title {
+        color: #FFFFFF;
+        font-size: 10px;
+        font-weight: normal;
+        line-height: 16px;
+        display: inline-block;
+
+        border-radius: 3px;
+        padding: 0 6px;
+    }
+
+    .available-currencies__table-status-title--status-close {
+        background-color: #F65454;
+    }
+
+    .available-currencies__table-status-title--status-open {
+        background-color: #2ED44D;
+    }
+
+    .available-currencies__table-status-title--status-pending {
+        background-color: #F69A54;
     }
 </style>

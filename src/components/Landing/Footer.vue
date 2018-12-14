@@ -28,7 +28,7 @@
 </template>
 
 <script>
-    import Container from '@/components/Container'
+    import Container from '@/components/Core/Container/Container'
     import ButtonComponent from '@/components/Landing/ButtonComponent'
 
     export default {

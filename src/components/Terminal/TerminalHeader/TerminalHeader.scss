@@ -1,0 +1,28 @@
+.terminal-header {
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 60px 0 50px;
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #F65454;
+}
+
+.terminal-header__logo {
+  margin-right: 40px;
+}
+
+.terminal-header__calendar {
+  margin-right: 20.5px;
+}
+
+.terminal-header__status {
+  margin-right: 83px;
+}
+
+.terminal-header__profile {
+  margin-left: auto;
+}

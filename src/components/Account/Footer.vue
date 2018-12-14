@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import LangSwitcher from '@/components/Account/UI/LangSwitcher'
+    import LangSwitcher from '@/components/Account/UI/LangSwitcher/LangSwitcher'
 
     export default {
         name: "Footer",

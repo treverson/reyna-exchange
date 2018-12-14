@@ -1,0 +1,51 @@
+.resend-code {
+  width: 100%;
+
+  border: none;
+  outline: none;
+  transition: .15s ease;
+
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .2px;
+  line-height: 37px;
+  text-transform: uppercase;
+  background-color: #C7C7C7;
+
+  cursor: not-allowed;
+
+  padding: 0;
+}
+
+.resend-code--isActive-false {
+  cursor: not-allowed;
+
+  background-color: #C7C7C7;
+
+  &:hover,
+  &:focus {
+    background-color: #C7C7C7;
+  }
+}
+
+.resend-code--isActive-true {
+  cursor: pointer;
+  background-color: #F65454;
+
+  &:hover,
+  &:focus {
+    background-color: #D11A1A;
+  }
+}
+
+.resend-code--isTimer-true {
+  cursor: not-allowed;
+
+  background-color: #C7C7C7;
+
+  &:hover,
+  &:focus {
+    background-color: #C7C7C7;
+  }
+}

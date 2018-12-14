@@ -20,7 +20,7 @@
 </template>
 
 <script>
-    import Container from '@/components/Container.vue'
+    import Container from '@/components/Core/Container/Container.vue'
     import CurrencyTracker from '@/components/Landing/Currency/CurrencyTracker.vue'
     import Navigation from '@/components/Landing/Navigation.vue'
     import ButtonComponent from '@/components/Landing/ButtonComponent.vue'

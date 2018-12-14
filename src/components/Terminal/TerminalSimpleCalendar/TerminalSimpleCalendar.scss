@@ -1,0 +1,24 @@
+.terminal-simple-calendar {
+  display: flex;
+  align-items: center;
+}
+
+.terminal-simple-calendar__date {
+  color: #fff;
+  font-size: 10px;
+  line-height: 12px;
+
+  margin-right: 8px;
+}
+
+.terminal-simple-calendar__time {
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: .5px;
+  line-height: 20px;
+
+  padding: 0 8px;
+
+  border-radius: 2px;
+  background-color: #272727;
+}

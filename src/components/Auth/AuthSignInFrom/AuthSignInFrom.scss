@@ -1,0 +1,64 @@
+.auth-sign-in-form {
+  max-width: 381px;
+  width: 100%;
+
+  margin: 96.5px auto 0 auto;
+
+  border-radius: 2px;
+  overflow: hidden;
+
+  background-color: #fff;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.10);
+}
+
+.auth-sign-in-form__heading {
+  margin: 0;
+  padding: 26px 0 21.5px 0;
+
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  letter-spacing: .36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.auth-sign-in-form__error {
+  margin: -9px 0 16px 0;
+
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 23px;
+  text-align: center;
+
+  background-color: #F65454;
+}
+
+.auth-sign-in-form__row {
+  padding: 0 17px;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.auth-sign-in-form__validation {
+  margin: 0 auto 25.5px auto;
+}
+
+.auth-sign-in-form__controls {
+  padding: 0 17px 19.5px 17px;
+  box-sizing: border-box;
+
+  .user-button {
+    display: block;
+
+    margin-top: 10px;
+
+    .user-button__content {
+      width: 100%;
+    }
+  }
+}

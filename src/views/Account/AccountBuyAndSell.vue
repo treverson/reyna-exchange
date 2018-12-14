@@ -33,13 +33,13 @@
 </template>
 
 <script>
-  import Page from '@/components/Page'
-  import Header from '@/components/Account/Header'
+  import Page from '@/components/Core/Page/Page'
+  import Header from '@/components/Account/AccountHeader/AccountHeader'
   import Footer from '@/components/Account/Footer'
   import AccountContainer from '@/components/Account/AccountContainer'
   import AvailableCurrencies from '@/components/Account/UI/AvailableCurrencies'
-  import TradeAmount from '@/components/Account/UI/TradeAmount'
-  import TradeDetails from '@/components/Account/UI/TradeDetails'
+  import TradeAmount from '@/components/Account/TradeAmount'
+  import TradeDetails from '@/components/Account/TradeDetails'
 
   export default {
     name: 'accountBuyAndSell',

@@ -24,6 +24,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-password:before {
+  content: "\e909";
+}
+.icon-small-arrow:before {
+  content: "\e908";
+}
 .icon-good:before {
   content: "\e907";
 }

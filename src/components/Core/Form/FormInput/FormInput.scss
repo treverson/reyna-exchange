@@ -1,0 +1,118 @@
+.form-input {
+  width: 100%;
+  position: relative;
+}
+
+.form-input__object {
+  width: 100%;
+  height: 39px;
+
+  padding: 0 18.5px;
+  box-sizing: border-box;
+
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+
+  outline: none;
+  background-color: #fff;
+
+  border-radius: 2px;
+  border: 1px solid #D1D1D1;
+
+  &::placeholder {
+    transition: .15s ease;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &:focus {
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+.form-input__object--type-password {
+  padding-right: 60px;
+}
+
+.form-input__password {
+  width: 43px;
+
+  position: absolute;
+
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: .15s ease;
+
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+
+  .form-input__icon {
+    color: rgba(0, 0, 0, 0.3);
+    transition: .15s ease;
+
+    position: relative;
+    top: 1px;
+    left: 1px;
+  }
+
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+
+  &:not(.form-input__password--isActive-true):hover,
+  &:not(.form-input__password--isActive-true):focus {
+    border-color: #D1D1D1;
+    background-color: #E8E8E8;
+
+    .form-input__icon {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.form-input__password--isActive-true {
+  .form-input__icon {
+    color: #fff;
+  }
+
+  border-color: #F65454;
+  background-color: #F65454;
+}
+
+.form-input__error-email {
+  position: absolute;
+
+  top: 7.5px;
+  right: 11px;
+
+  padding: 0 10px;
+  display: inline-block;
+
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 23px;
+
+  border-radius: 2px;
+  background-color: #F65454;
+
+  visibility: hidden;
+}
+
+.form-input__error-email--isActive-true {
+  visibility: visible;
+}
+
+.form-input__object--emailNotCorrect-yes {
+  padding-right: 180px;
+}

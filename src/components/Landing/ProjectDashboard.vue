@@ -20,7 +20,7 @@
 </template>
 
 <script>
-    import Container from '@/components/Container'
+    import Container from '@/components/Core/Container/Container'
 
     export default {
         name: "ProjectDashboard",

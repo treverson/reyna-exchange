@@ -33,13 +33,13 @@
 </template>
 
 <script>
-  import Page from '@/components/Page'
-  import Header from '@/components/Account/Header'
+  import Page from '@/components/Core/Page/Page'
+  import Header from '@/components/Account/AccountHeader/AccountHeader'
   import Footer from '@/components/Account/Footer'
   import AccountContainer from '@/components/Account/AccountContainer'
-  import GettingStart from '@/components/Account/UI/GettingStart'
+  import GettingStart from '@/components/Account/GettingStart'
   import AvailableCurrencies from '@/components/Account/UI/AvailableCurrencies'
-  import MyFunds from '@/components/Account/UI/MyFunds'
+  import MyFunds from '@/components/Account/MyFunds'
 
   export default {
     name: 'accountDashboard',

@@ -24,7 +24,7 @@
 
             <!-- available-currencies -->
             <div class="account-history__available-currencies">
-              <AvailableCurrencies table-name="Transactions" :current-item="0" :table-data="tableData" :toggle-actions="false" />
+              <AvailableCurrencies table-name="Transactions" :current-item="1" :table-data="tableData" :toggle-actions="false" />
             </div>
             <!-- available-currencies end -->
 
@@ -37,13 +37,13 @@
 </template>
 
 <script>
-  import Page from '@/components/Page'
-  import Header from '@/components/Account/Header'
+  import Page from '@/components/Core/Page/Page'
+  import Header from '@/components/Account/AccountHeader/AccountHeader'
   import Footer from '@/components/Account/Footer'
   import AccountContainer from '@/components/Account/AccountContainer'
   import AvailableCurrencies from '@/components/Account/UI/AvailableCurrencies'
-  import HistoryFilter from '@/components/Account/UI/HistoryFilter'
-  import ExportOrders from '@/components/Account/UI/ExportOrders'
+  import HistoryFilter from '@/components/Account/HistoryFilter'
+  import ExportOrders from '@/components/Account/ExportOrders'
 
   export default {
     name: 'accountHistory',
@@ -199,37 +199,43 @@
                     tableHead: [
                         {
                             id: 0,
-                            width: '118px',
+                            width: '152px',
                             title: 'Currency'
                         },
                         {
                             id: 1,
-                            width: '81px',
-                            title: 'Type'
+                            width: '97px',
+                            title: 'Side'
                         },
                         {
                             id: 2,
-                            width: '177px',
-                            title: 'Date'
+                            width: '76px',
+                            title: 'Type'
                         },
                         {
                             id: 3,
-                            width: '168px',
-                            title: 'Amount'
+                            width: '164px',
+                            title: 'Average Price'
                         },
                         {
                             id: 4,
-                            width: '149px',
-                            title: 'Rate'
+                            width: '120px',
+                            title: 'Filled'
                         },
                         {
                             id: 5,
-                            width: '175px',
-                            title: 'Fee'
+                            width: '142px',
+                            title: 'Amount'
                         },
                         {
                             id: 6,
-                            width: '117px',
+                            width: '56px',
+                            title: 'Status',
+                            align: 'right'
+                        },
+                        {
+                            id: 7,
+                            width: '177px',
                             title: 'Total',
                             align: 'right'
                         }
@@ -246,12 +252,14 @@
                                 {
                                     id: 1,
                                     type: 'type',
+                                    title: 'dice',
                                     isSale: true
                                 },
                                 {
                                     id: 2,
-                                    type: 'date',
-                                    content: '18-11-30 - 14:11:23'
+                                    type: 'default',
+                                    title: 'Limit',
+                                    align: 'left'
                                 },
                                 {
                                     id: 3,
@@ -261,42 +269,50 @@
                                 },
                                 {
                                     id: 4,
-                                    type: 'cryptoCurrency',
-                                    content: '0.00000327',
-                                    currencyType: 'BTC'
+                                    type: 'default',
+                                    title: '0.00000327',
+                                    align: 'left'
                                 },
                                 {
                                     id: 5,
-                                    type: 'cryptoCurrency',
-                                    content: '0.00011739',
-                                    currencyType: 'BTC'
+                                    type: 'default',
+                                    title: '1.00000000',
+                                    align: 'left'
                                 },
                                 {
                                     id: 6,
+                                    type: 'status',
+                                    status: 0,
+                                    align: 'right'
+                                },
+                                {
+                                    id: 7,
                                     type: 'cryptoCurrency',
-                                    content: '0.00234786 ',
+                                    content: '0.00234786',
                                     currencyType: 'BTC',
                                     align: 'right'
                                 }
                             ]
                         },
                         {
-                            id: 0,
+                            id: 1,
                             content: [
                                 {
                                     id: 0,
                                     type: 'currency',
-                                    title: 'trx'
+                                    title: 'dice'
                                 },
                                 {
                                     id: 1,
                                     type: 'type',
-                                    isSale: false
+                                    title: 'dice',
+                                    isSale: true
                                 },
                                 {
                                     id: 2,
-                                    type: 'date',
-                                    content: '18-11-30 - 14:11:23'
+                                    type: 'default',
+                                    title: 'Limit',
+                                    align: 'left'
                                 },
                                 {
                                     id: 3,
@@ -306,20 +322,79 @@
                                 },
                                 {
                                     id: 4,
-                                    type: 'cryptoCurrency',
-                                    content: '0.00000327',
-                                    currencyType: 'BTC'
+                                    type: 'default',
+                                    title: '0.00000327',
+                                    align: 'left'
                                 },
                                 {
                                     id: 5,
-                                    type: 'cryptoCurrency',
-                                    content: '0.00011739',
-                                    currencyType: 'BTC'
+                                    type: 'default',
+                                    title: '1.00000000',
+                                    align: 'left'
                                 },
                                 {
                                     id: 6,
+                                    type: 'status',
+                                    status: 1,
+                                    align: 'right'
+                                },
+                                {
+                                    id: 7,
                                     type: 'cryptoCurrency',
-                                    content: '0.00234786 ',
+                                    content: '0.00234786',
+                                    currencyType: 'BTC',
+                                    align: 'right'
+                                }
+                            ]
+                        },
+                        {
+                            id: 2,
+                            content: [
+                                {
+                                    id: 0,
+                                    type: 'currency',
+                                    title: 'dice'
+                                },
+                                {
+                                    id: 1,
+                                    type: 'type',
+                                    title: 'dice',
+                                    isSale: true
+                                },
+                                {
+                                    id: 2,
+                                    type: 'default',
+                                    title: 'Limit',
+                                    align: 'left'
+                                },
+                                {
+                                    id: 3,
+                                    type: 'cryptoCurrency',
+                                    content: '718.00000000',
+                                    currencyType: 'TRX'
+                                },
+                                {
+                                    id: 4,
+                                    type: 'default',
+                                    title: '0.00000327',
+                                    align: 'left'
+                                },
+                                {
+                                    id: 5,
+                                    type: 'default',
+                                    title: '1.00000000',
+                                    align: 'left'
+                                },
+                                {
+                                    id: 6,
+                                    type: 'status',
+                                    status: 2,
+                                    align: 'right'
+                                },
+                                {
+                                    id: 7,
+                                    type: 'cryptoCurrency',
+                                    content: '0.00234786',
                                     currencyType: 'BTC',
                                     align: 'right'
                                 }
@@ -333,39 +408,8 @@
                     tableHead: [
                         {
                             id: 0,
-                            width: '118px',
+                            width: '152px',
                             title: 'Currency'
-                        },
-                        {
-                            id: 1,
-                            width: '81px',
-                            title: 'Type'
-                        },
-                        {
-                            id: 2,
-                            width: '177px',
-                            title: 'Date'
-                        },
-                        {
-                            id: 3,
-                            width: '168px',
-                            title: 'Amount'
-                        },
-                        {
-                            id: 4,
-                            width: '149px',
-                            title: 'Rate'
-                        },
-                        {
-                            id: 5,
-                            width: '175px',
-                            title: 'Fee'
-                        },
-                        {
-                            id: 6,
-                            width: '117px',
-                            title: 'Total',
-                            align: 'right'
                         }
                     ],
                     rows: [
@@ -376,86 +420,6 @@
                                     id: 0,
                                     type: 'currency',
                                     title: 'dice'
-                                },
-                                {
-                                    id: 1,
-                                    type: 'type',
-                                    isSale: true
-                                },
-                                {
-                                    id: 2,
-                                    type: 'date',
-                                    content: '18-11-30 - 14:11:23'
-                                },
-                                {
-                                    id: 3,
-                                    type: 'cryptoCurrency',
-                                    content: '718.00000000',
-                                    currencyType: 'TRX'
-                                },
-                                {
-                                    id: 4,
-                                    type: 'cryptoCurrency',
-                                    content: '0.00000327',
-                                    currencyType: 'BTC'
-                                },
-                                {
-                                    id: 5,
-                                    type: 'cryptoCurrency',
-                                    content: '0.00011739',
-                                    currencyType: 'BTC'
-                                },
-                                {
-                                    id: 6,
-                                    type: 'cryptoCurrency',
-                                    content: '0.00234786 ',
-                                    currencyType: 'BTC',
-                                    align: 'right'
-                                }
-                            ]
-                        },
-                        {
-                            id: 0,
-                            content: [
-                                {
-                                    id: 0,
-                                    type: 'currency',
-                                    title: 'trx'
-                                },
-                                {
-                                    id: 1,
-                                    type: 'type',
-                                    isSale: false
-                                },
-                                {
-                                    id: 2,
-                                    type: 'date',
-                                    content: '18-11-30 - 14:11:23'
-                                },
-                                {
-                                    id: 3,
-                                    type: 'cryptoCurrency',
-                                    content: '718.00000000',
-                                    currencyType: 'TRX'
-                                },
-                                {
-                                    id: 4,
-                                    type: 'cryptoCurrency',
-                                    content: '0.00000327',
-                                    currencyType: 'BTC'
-                                },
-                                {
-                                    id: 5,
-                                    type: 'cryptoCurrency',
-                                    content: '0.00011739',
-                                    currencyType: 'BTC'
-                                },
-                                {
-                                    id: 6,
-                                    type: 'cryptoCurrency',
-                                    content: '0.00234786 ',
-                                    currencyType: 'BTC',
-                                    align: 'right'
                                 }
                             ]
                         }

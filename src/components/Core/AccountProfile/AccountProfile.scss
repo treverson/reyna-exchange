@@ -1,0 +1,156 @@
+.account-profile {
+  height: 100%;
+  position: relative;
+}
+
+.account-profile--theme-light {
+
+  .account-profile__username {
+    color: #161616;
+  }
+
+  .account-profile__arrow {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .account-profile__actions {
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
+  }
+
+  .account-profile__link {
+    color: #000000;
+
+    &:hover,
+    &:focus {
+      background-color: #F5EBEB;
+    }
+  }
+
+  &.account-profile--dropDown-active {
+    .account-profile__action {
+      background-color: #fff;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
+    }
+  }
+
+}
+
+.account-profile--theme-dark {
+
+  .account-profile__username {
+    color: #FFFFFF;
+  }
+
+  .account-profile__arrow {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .account-profile__actions {
+    background-color: #202020;
+  }
+
+  .account-profile__link {
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: #343434;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .account-profile__arrow {
+      color: #fff;
+    }
+  }
+
+  &.account-profile--dropDown-active {
+    .account-profile__action {
+      background-color: #202020;
+    }
+  }
+
+}
+
+.account-profile__action {
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+
+  margin: 6.5px -19.9px 0 -18px;
+  padding: 0 19.9px 0 18px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: .15s ease;
+}
+
+.account-profile__username {
+  font-size: 12px;
+  line-height: 14px;
+
+  margin-right: 17px;
+}
+
+.account-profile__avatar {
+  width: 30px;
+  height: 30px;
+
+  margin-right: 10.9px;
+
+  border-radius: 5px;
+}
+
+.account-profile__arrow {
+  transition: .20s ease;
+}
+
+.account-profile--dropDown-active {
+  .account-profile__action {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  .account-profile__arrow {
+    transform: rotate(180deg);
+  }
+}
+
+.account-profile__actions {
+  position: absolute;
+
+  width: calc(100% + 19.9px + 18px);
+  overflow: hidden;
+
+  left: -18px;
+
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+  display: flex;
+  flex-direction: column;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: .20s ease;
+}
+
+.account-profile__actions--dropDown-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.account-profile__link {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 33px;
+  text-decoration: none;
+
+  padding: 0 18px;
+  box-sizing: border-box;
+}

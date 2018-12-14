@@ -1,5 +1,5 @@
 <template v-if="type === string">
-    <a v-if="type === 'link'" :href="link" :class="theme">{{ content }}</a>
+    <router-link v-if="type === 'link'" :to="link" :class="theme">{{ content }}</router-link>
     <input v-else type="submit" :class="theme" :value="content">
 </template>
 

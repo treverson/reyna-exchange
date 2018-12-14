@@ -27,7 +27,7 @@
 </template>
 
 <script>
-    import Container from '@/components/Container'
+    import Container from '@/components/Core/Container/Container'
     import HeadingSection from '@/components/Landing/HeadingSection'
     import IconSection from '@/components/Landing/IconSection'
     import LearnMore from '@/components/Landing/LearnMore'

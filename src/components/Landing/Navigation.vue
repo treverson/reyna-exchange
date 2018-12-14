@@ -17,8 +17,8 @@
                 </li>
             </ul>
             <div class="navigation__auth">
-                <a href="#" class="navigation__login">Sign in</a>
-                <ButtonComponent link="#" :theme="[ 'button', 'button--theme-inner', 'navigation__button' ]" content="Get Started" type="link" />
+                <router-link to="/auth/sign-in" class="navigation__login">Sign in</router-link>
+                <ButtonComponent link="/auth/register" :theme="[ 'button', 'button--theme-inner', 'navigation__button' ]" content="Get Started" type="link" />
             </div>
             <HamburgerComponent @onClick="changeNavigationStatus()" />
         </Container>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-    import Container from '@/components/Container.vue'
+    import Container from '@/components/Core/Container/Container.vue'
     import ButtonComponent from '@/components/Landing/ButtonComponent.vue'
     import HamburgerComponent from '@/components/Landing/HamburgerComponent.vue'
 
