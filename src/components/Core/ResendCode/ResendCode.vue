@@ -145,14 +145,14 @@
                  * Если таймер не активный
                  */
                 if (!this.timerLeft) {
-                    label = 'Send code'
+                    label = 'Send Code'
                 }
 
                 /*
                  * Если таймер активный
                  */
                 else if (this.timerLeft > 0) {
-                    label = 'Resend code ('+ this.timerLeft +')'
+                    label = 'Re-send code ('+ this.timerLeft +')'
                 }
 
                 return label

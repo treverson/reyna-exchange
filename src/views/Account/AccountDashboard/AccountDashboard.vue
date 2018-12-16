@@ -1,52 +1,47 @@
 <template>
   <Page theme="account">
-    <div class="account-dashboard">
-      <Header />
-
-        <AccountContainer>
-          <div class="account-dashboard__grid">
-
-            <!-- getting start -->
-            <div class="account-dashboard__getting-start">
-              <GettingStart />
-            </div>
-            <!-- getting start end -->
-
-            <!-- available-currencies -->
-            <div class="account-dashboard__available-currencies">
-              <AvailableCurrencies table-name="Available currencies" :current-item="0" :table-data="tableData" :toggle-actions="true" />
-            </div>
-            <!-- available-currencies end -->
-
-            <!-- my funds -->
-            <div class="account-dashboard__my-funds">
-              <MyFunds />
-            </div>
-            <!-- my funds end -->
-
+    <div :class="['account-dashboard']">
+      <account-header />
+        <div v-if="window.width <= 712" class="account__section-tabs">
+          <div class="account__section-tabs-wrap">
+            <button :class="{ 'account__section-tab': true, 'account__section-tab--isActive-yes': currentTab === 0 }" @click="changeCurrentTab(0)">Getting Start</button>
+            <button :class="{ 'account__section-tab': true, 'account__section-tab--isActive-yes': currentTab === 1 }" @click="changeCurrentTab(1)">My funds</button>
+            <button :class="{ 'account__section-tab': true, 'account__section-tab--isActive-yes': currentTab === 2 }" @click="changeCurrentTab(2)">Available currencies</button>
           </div>
-        </AccountContainer>
-
-      <Footer />
+        </div>
+        <account-container>
+          <div :class="['account-dashboard__grid']">
+            <div v-if="getSectionVisible(0)" :class="['account-dashboard__item', 'account-dashboard__item--type-getting-start']">
+              <getting-start />
+            </div>
+            <div v-if="getSectionVisible(1)" :class="['account-dashboard__item', 'account-dashboard__item--type-available-currencies']">
+              <available-currencies table-name="Available currencies" :table-data="tableData" :toggle-actions="true" />
+            </div>
+            <div v-if="getSectionVisible(2)" :class="['account-dashboard__item', 'account-dashboard__item--type-my-funds']">
+              <my-funds />
+            </div>
+          </div>
+        </account-container>
+      <account-footer />
     </div>
   </Page>
 </template>
 
 <script>
   import Page from '@/components/Core/Page/Page'
-  import Header from '@/components/Account/AccountHeader/AccountHeader'
-  import Footer from '@/components/Account/Footer'
-  import AccountContainer from '@/components/Account/AccountContainer'
-  import GettingStart from '@/components/Account/GettingStart'
-  import AvailableCurrencies from '@/components/Account/UI/AvailableCurrencies'
-  import MyFunds from '@/components/Account/MyFunds'
+  import AccountHeader from '@/components/Account/Header/Header'
+  import AccountFooter from '@/components/Account/Footer/Footer'
+  import AccountContainer from '@/components/Account/AccountContainer/AccountContainer'
+  import GettingStart from '@/components/Account/GettingStart/GettingStart'
+  import AvailableCurrencies from '@/components/Account/AvailableCurrencies/AvailableCurrencies'
+  import MyFunds from '@/components/Account/MyFunds/MyFunds'
 
   export default {
     name: 'accountDashboard',
     components: {
         Page,
-        Header,
-        Footer,
+        AccountHeader,
+        AccountFooter,
         AccountContainer,
         GettingStart,
         AvailableCurrencies,
@@ -1379,39 +1374,33 @@
                         }
                     ]
                 }
-            ]
+            ],
+            currentTab: 0,
+            window: {
+                width: 0,
+                height: 0
+            }
         }
+    },
+    methods: {
+        changeCurrentTab: function (id) {
+            this.currentTab = id
+        },
+        handleResize() {
+            this.window.width = window.innerWidth;
+            this.window.height = window.innerHeight;
+        },
+        getSectionVisible: function () {
+            return true
+        }
+    },
+    created() {
+        window.addEventListener('resize', this.handleResize)
+        this.handleResize();
     }
   }
 </script>
 
 <style lang="scss">
-  .account-dashboard__grid {
-    margin-top: 13px;
-
-    display: flex;
-    align-items: flex-start;
-  }
-
-  .account-dashboard__getting-start {
-    flex-shrink: 0;
-    max-width: 256px;
-    width: 100%;
-
-    margin-right: 17px;
-  }
-
-  .account-dashboard__available-currencies {
-    flex-shrink: 0;
-    max-width: 712px;
-    width: 100%;
-
-    margin-right: 16px;
-  }
-
-  .account-dashboard__my-funds {
-    flex-shrink: 0;
-    max-width: 256px;
-    width: 100%;
-  }
+  @import "AccountDashboard";
 </style>

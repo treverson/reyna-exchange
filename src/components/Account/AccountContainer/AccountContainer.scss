@@ -1,0 +1,37 @@
+@import "cointainer-size";
+
+.account-container {
+  max-width: 1258px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  box-sizing: content-box;
+}
+
+.account-container--boxSizing-content {
+  box-sizing: content-box;
+}
+
+@media (max-width: $containerLarge) {
+  .account-container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: $containerMedium) {
+  .account-container {
+    max-width: 712px;
+  }
+}
+
+@media (max-width: $containerSmall) {
+  .account-container {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: $containerExtraSmall) {
+  .account-container {
+    max-width: 100%;
+  }
+}

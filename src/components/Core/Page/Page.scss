@@ -1,5 +1,5 @@
 .page {
-  font: 13px "SF UI Display", "SF UI Display Fixed", sans-serif;
+  font: 13px "Segoe UI Fixed", sans-serif;
   line-height: 1.5;
 
   position: relative;
@@ -12,7 +12,7 @@
 
 
 .page--theme-account {
-  background-color: #F5EBEB;
+  background-color: #F6F6F6;
 }
 
 .page--theme-terminal {
@@ -20,5 +20,9 @@
 }
 
 .page--theme-auth {
-  background-color: #F65454;
+  background-color: #D21616;
+}
+
+.page--theme-red {
+  background-color: #D21616;
 }

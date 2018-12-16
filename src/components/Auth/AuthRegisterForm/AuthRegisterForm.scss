@@ -3,8 +3,12 @@
   width: 100%;
 
   margin: 96.5px auto 0 auto;
+}
 
-  border-radius: 2px;
+.auth-register-form__wrap {
+  width: 100%;
+
+  border-radius: 5px;
   overflow: hidden;
 
   background-color: #fff;
@@ -12,28 +16,31 @@
 }
 
 .auth-register-form__heading {
-  margin: 0;
-  padding: 26px 0 9.5px 0;
+  margin: 0 0 15px 0;
+  padding: 0;
 
-  color: #000000;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 16px;
-  letter-spacing: .36px;
-  text-transform: uppercase;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 43px;
+
   text-align: center;
 }
 
 .auth-register-form__error {
-  margin: 0;
+  margin: -2.5px auto 11.5px auto;
+  padding: 0 33px;
 
-  color: #fff;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 23px;
+  display: table;
+
+  color: #D21616;
+  font-size: 13px;
+  line-height: 40px;
   text-align: center;
 
-  background-color: #F65454;
+  border-radius: 6px;
+  border: 1px solid #FFB8B8;
+  background-color: #FFCCCC;
 }
 
 .auth-register-form__content {

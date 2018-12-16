@@ -26,6 +26,7 @@
   }
 
   &:focus {
+    border-color: #515151;
     &::placeholder {
       opacity: 0;
     }
@@ -85,8 +86,8 @@
     color: #fff;
   }
 
-  border-color: #F65454;
-  background-color: #F65454;
+  border-color: #443C3C;
+  background-color: #443C3C;
 }
 
 .form-input__error-email {

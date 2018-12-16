@@ -6,45 +6,47 @@
         <p v-show="formErrorID !== 0" :class="{ 'auth-register-form__error': true }">
             {{ formError }}
         </p>
-        <div :class="['auth-register-form__content']">
-            <div :class="['auth-register-form__row']">
-                <div :class="['auth-register-form__column']">
-                    <form-input type="text" placeholder="First Name" responsive-key="firstName" :class="['auth-register-form__field']" />
+        <div :class="['auth-register-form__wrap']">
+            <div :class="['auth-register-form__content']">
+                <div :class="['auth-register-form__row']">
+                    <div :class="['auth-register-form__column']">
+                        <form-input type="text" placeholder="First Name" responsive-key="firstName" :class="['auth-register-form__field']" />
+                    </div>
+                    <div :class="['auth-register-form__column']">
+                        <form-input type="text" placeholder="Last Name" responsive-key="lastName" :class="['auth-register-form__field']" />
+                    </div>
                 </div>
-                <div :class="['auth-register-form__column']">
-                    <form-input type="text" placeholder="Last Name" responsive-key="lastName" :class="['auth-register-form__field']" />
+                <div :class="['auth-register-form__row']">
+                    <div :class="['auth-register-form__column']">
+                        <form-input type="email" placeholder="Email" responsive-key="email" :class="['auth-register-form__field']" />
+                    </div>
                 </div>
-            </div>
-            <div :class="['auth-register-form__row']">
-                <div :class="['auth-register-form__column']">
-                    <form-input type="email" placeholder="Email" responsive-key="email" :class="['auth-register-form__field']" />
+                <div :class="['auth-register-form__row']">
+                    <div :class="['auth-register-form__column']">
+                        <form-input type="password" placeholder="Choose a password" responsive-key="password" :class="['auth-register-form__field']" />
+                    </div>
                 </div>
-            </div>
-            <div :class="['auth-register-form__row']">
-                <div :class="['auth-register-form__column']">
-                    <form-input type="password" placeholder="Choose a password" responsive-key="password" :class="['auth-register-form__field']" />
+                <div v-show="form.password.length > 0" :class="['auth-register-form__validity']">
+                    <span :style="validityClassByID(0)"></span>
+                    <span :style="validityClassByID(1)"></span>
+                    <span :style="validityClassByID(2)"></span>
+                    <span :class="validityLabelClass">{{ passwordError }}</span>
                 </div>
+                <div :class="['auth-register-form__reCaptcha']">
+                    <vue-recaptcha sitekey="6LduE4AUAAAAAD9JCpzfpMIjwr36co5x--SxYADo" />
+                </div>
+                <div :class="['auth-register-form__rules']">
+                    <form-checkbox responsive-key="rules" :checked="false" label="I certify that I am 18 years of age or older, and I agree to the User Agreement and Privacy Policy"/>
+                </div>
+                <user-button type="button" @click.native="validateDataForm()" theme="green" :class="['auth-register-form__button']">
+                    <template v-if="isCreate === false">
+                        Create account
+                    </template>
+                    <template v-else>
+                        <button-loader />
+                    </template>
+                </user-button>
             </div>
-            <div v-show="form.password.length > 0" :class="['auth-register-form__validity']">
-                <span :style="validityClassByID(0)"></span>
-                <span :style="validityClassByID(1)"></span>
-                <span :style="validityClassByID(2)"></span>
-                <span :class="validityLabelClass">{{ passwordError }}</span>
-            </div>
-            <div :class="['auth-register-form__reCaptcha']">
-                <vue-recaptcha sitekey="6LduE4AUAAAAAD9JCpzfpMIjwr36co5x--SxYADo" />
-            </div>
-            <div :class="['auth-register-form__rules']">
-                <form-checkbox responsive-key="rules" :checked="false" label="I certify that I am 18 years of age or older, and I agree to the User Agreement and Privacy Policy"/>
-            </div>
-            <user-button type="button" @click.native="validateDataForm()" theme="red" :class="['auth-register-form__button']">
-                <template v-if="isCreate === false">
-                    Create account
-                </template>
-                <template v-else>
-                    <button-loader />
-                </template>
-            </user-button>
         </div>
     </div>
 </template>

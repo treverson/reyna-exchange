@@ -38,12 +38,12 @@
 
 <script>
   import Page from '@/components/Core/Page/Page'
-  import Header from '@/components/Account/AccountHeader/AccountHeader'
-  import Footer from '@/components/Account/Footer'
-  import AccountContainer from '@/components/Account/AccountContainer'
-  import AvailableCurrencies from '@/components/Account/UI/AvailableCurrencies'
-  import HistoryFilter from '@/components/Account/HistoryFilter'
-  import ExportOrders from '@/components/Account/ExportOrders'
+  import Header from '@/components/Account/Header/Header'
+  import Footer from '@/components/Account/Footer/Footer'
+  import AccountContainer from '@/components/Account/AccountContainer/AccountContainer'
+  import AvailableCurrencies from '@/components/Account/AvailableCurrencies/AvailableCurrencies'
+  import HistoryFilter from '@/components/Account/HistoryFilter/HistoryFilter'
+  import ExportOrders from '@/components/Account/ExportOrders/ExportOrders'
 
   export default {
     name: 'accountHistory',

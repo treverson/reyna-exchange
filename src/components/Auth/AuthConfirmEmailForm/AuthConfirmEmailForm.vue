@@ -7,7 +7,7 @@
             Your account has been successfully created and we just sent you activation link. Please check your email.
         </p>
         <user-button type="button" theme="green" :class="['auth-confirm-email-form__button']">
-            Resend
+            Re-send
         </user-button>
     </div>
 </template>

@@ -3,8 +3,10 @@
   width: 100%;
 
   margin: 96.5px auto 0 auto;
+}
 
-  border-radius: 2px;
+.auth-sign-in-form__wrap {
+  border-radius: 5px;
   overflow: hidden;
 
   background-color: #fff;
@@ -13,27 +15,31 @@
 
 .auth-sign-in-form__heading {
   margin: 0;
-  padding: 26px 0 21.5px 0;
+  padding: 26px 0 20.5px 0;
 
   color: #000000;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 16px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 21px;
   letter-spacing: .36px;
-  text-transform: uppercase;
   text-align: center;
 }
 
 .auth-sign-in-form__error {
-  margin: -9px 0 16px 0;
+  margin: -9px auto 16px auto;
 
-  color: #fff;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 23px;
+  padding: 0 33px;
+
+  display: table;
+
+  color: #D21616;
+  font-size: 13px;
+  line-height: 40px;
   text-align: center;
 
-  background-color: #F65454;
+  border-radius: 6px;
+  border: 1px solid #FFB8B8;
+  background-color: #FFCCCC;
 }
 
 .auth-sign-in-form__row {

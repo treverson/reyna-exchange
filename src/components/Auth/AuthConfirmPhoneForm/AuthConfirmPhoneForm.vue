@@ -1,31 +1,33 @@
 <template>
-      <div :class="['auth-confirm-phone-form']">
-          <div :class="['auth-confirm-phone-form__icon']">
-              <span :class="['icon-good']"></span>
-          </div>
-          <h3 :class="['auth-confirm-phone-form__heading']">
-              Verify your phone
-          </h3>
-          <p v-show="hasError === true" :class="{ 'auth-confirm-phone-form__error': true }">
-              {{ errorTitle }}
-          </p>
-          <p :class="['auth-confirm-phone-form__desk']">
-              We need to verify your phone number in order to make your account more secure
-          </p>
-          <div :class="['auth-confirm-phone-form__content']">
-              <vue-tel-input v-model="phoneNumber" defaultCountry="us" @onInput="onInput" placeholder="+ 1 000 000 0000" :class="['auth-confirm-phone-form__phone']" />
-              <resend-code :is-active="validPhone" :phone="phoneNumber" :token="phoneToken" :class="['auth-confirm-phone-form__code']" />
-          </div>
-          <code-verification :class="['auth-confirm-phone-form__verify']" />
-          <user-button type="button" theme="green" @click.native="onClickSubmit()" :class="['auth-confirm-phone-form__button']">
-              <template v-if="isRequestSend === false">
-                  Verify
-              </template>
-              <template v-else>
-                  <button-loader />
-              </template>
-          </user-button>
-      </div>
+    <div :class="['auth-confirm-phone-form']">
+        <p v-show="hasError === true" :class="{ 'auth-confirm-phone-form__error': true }">
+            {{ errorTitle }}
+        </p>
+        <div :class="['auth-confirm-phone-form__wrap']">
+            <div :class="['auth-confirm-phone-form__icon']">
+                <span :class="['icon-good']"></span>
+            </div>
+            <h3 :class="['auth-confirm-phone-form__heading']">
+                Verify your phone
+            </h3>
+            <p :class="['auth-confirm-phone-form__desk']">
+                We need to verify your phone number in order to make your account more secure
+            </p>
+            <div :class="['auth-confirm-phone-form__content']">
+                <vue-tel-input v-model="phoneNumber" defaultCountry="us" @onInput="onInput" placeholder="+ 1 000 000 0000" :class="['auth-confirm-phone-form__phone']" />
+                <resend-code :is-active="validPhone" :phone="phoneNumber" :token="phoneToken" :class="['auth-confirm-phone-form__code']" />
+            </div>
+            <code-verification :class="['auth-confirm-phone-form__verify']" />
+            <user-button type="button" theme="green" @click.native="onClickSubmit()" :class="['auth-confirm-phone-form__button']">
+                <template v-if="isRequestSend === false">
+                    Verify
+                </template>
+                <template v-else>
+                    <button-loader />
+                </template>
+            </user-button>
+        </div>
+    </div>
 </template>
 
 <script>

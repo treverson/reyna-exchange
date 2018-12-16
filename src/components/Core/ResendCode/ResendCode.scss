@@ -1,7 +1,6 @@
 .resend-code {
   width: 100%;
 
-  border: none;
   outline: none;
   transition: .15s ease;
 
@@ -10,8 +9,9 @@
   font-weight: 500;
   letter-spacing: .2px;
   line-height: 37px;
-  text-transform: uppercase;
-  background-color: #C7C7C7;
+  background-color: #D1D1D1;
+
+  border: 1px solid #BFBFBF;
 
   cursor: not-allowed;
 
@@ -21,7 +21,8 @@
 .resend-code--isActive-false {
   cursor: not-allowed;
 
-  background-color: #C7C7C7;
+  background-color: #D1D1D1;
+  border-color: #BFBFBF;
 
   &:hover,
   &:focus {
@@ -31,7 +32,8 @@
 
 .resend-code--isActive-true {
   cursor: pointer;
-  background-color: #F65454;
+  background-color: #D21616;
+  border-color: #A40202;
 
   &:hover,
   &:focus {
@@ -43,6 +45,7 @@
   cursor: not-allowed;
 
   background-color: #C7C7C7;
+  border-color: #BFBFBF;
 
   &:hover,
   &:focus {

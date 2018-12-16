@@ -34,12 +34,12 @@
 
 <script>
   import Page from '@/components/Core/Page/Page'
-  import Header from '@/components/Account/AccountHeader/AccountHeader'
-  import Footer from '@/components/Account/Footer'
-  import AccountContainer from '@/components/Account/AccountContainer'
-  import AvailableCurrencies from '@/components/Account/UI/AvailableCurrencies'
-  import TradeAmount from '@/components/Account/TradeAmount'
-  import TradeDetails from '@/components/Account/TradeDetails'
+  import Header from '@/components/Account/Header/Header'
+  import Footer from '@/components/Account/Footer/Footer'
+  import AccountContainer from '@/components/Account/AccountContainer/AccountContainer'
+  import AvailableCurrencies from '@/components/Account/AvailableCurrencies/AvailableCurrencies'
+  import TradeAmount from '@/components/Account/TradeAmount/TradeAmount'
+  import TradeDetails from '@/components/Account/TradeDetails/TradeDetails'
 
   export default {
     name: 'accountBuyAndSell',

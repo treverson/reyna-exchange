@@ -18,7 +18,8 @@
                     'page': true,
                     'page--theme-account': this.theme === 'account',
                     'page--theme-terminal': this.theme === 'terminal',
-                    'page--theme-auth': this.theme === 'auth'
+                    'page--theme-auth': this.theme === 'auth',
+                    'page--theme-red': this.theme === 'red'
                 }
             }
         }

@@ -4,7 +4,7 @@ import Home from './views/Home'
 
 // Account
 import AccountEntryPoint from './views/Account/AccountEntryPoint.vue'
-import AccountDashboard from './views/Account/AccountDashboard.vue'
+import AccountDashboard from './views/Account/AccountDashboard/AccountDashboard.vue'
 import AccountBuyAndSell from './views/Account/AccountBuyAndSell.vue'
 import AccountHistory from './views/Account/AccountHistory.vue'
 
@@ -93,5 +93,5 @@ export default new Router({
             path: '/verify/phone/:phoneToken',
             component: VerifyPhone
         }
-    ] // phone token jm50zbsvzq
+    ]
 })
