@@ -14,7 +14,7 @@
 
     export default {
         name: "SwapCurrency",
-        components: {BlockSection}
+        components: { BlockSection }
     }
 </script>
 
