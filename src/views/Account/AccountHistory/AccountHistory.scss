@@ -1,0 +1,40 @@
+@import "../../../components/Account/AccountContainer/cointainer-size";
+
+.account-history__grid {
+  margin-top: 13px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.account-history__history-filter {
+  margin-bottom: 16px;
+}
+
+.account-history__column-history-filter {
+  flex-shrink: 0;
+  max-width: 256px;
+  width: 100%;
+}
+
+.account-history__available-currencies {
+  flex-shrink: 0;
+  max-width: calc(100% - 256px - 17px);
+  width: 100%;
+}
+
+@media (max-width: $containerMedium) {
+  .account-history__grid {
+    flex-direction: column;
+  }
+
+  .account-history__column-history-filter,
+  .account-history__available-currencies {
+    max-width: 100%;
+  }
+
+  .account-history__export-orders {
+    margin-bottom: 16px;
+  }
+}

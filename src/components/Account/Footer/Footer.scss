@@ -31,3 +31,16 @@
 .account-footer__lang {
   margin-left: auto;
 }
+
+.account-footer--theme-red {
+  background-color: #D21616;
+
+  .account-footer__copyright {
+    color: #fff;
+  }
+
+  .lang-switcher__current {
+    color: #fff;
+    background-color: rgba(22, 22, 22, 0.10);
+  }
+}

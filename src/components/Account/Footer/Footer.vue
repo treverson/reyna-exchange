@@ -1,5 +1,5 @@
 <template>
-    <footer :class="['account-footer']">
+    <footer :class="objectClass">
         <account-container :class="['account-footer__container']">
             <span :class="['account-footer__copyright']">
                 © 2018-2019 ReynaExchange. All rights reserved
@@ -15,9 +15,22 @@
 
     export default {
         name: "Footer",
+        props: {
+            theme: {
+                type: String
+            }
+        },
         components: {
             LangSwitcher,
             AccountContainer
+        },
+        computed: {
+            objectClass: function () {
+                return {
+                    'account-footer': true,
+                    'account-footer--theme-red': this.theme === 'red'
+                }
+            }
         }
     }
 </script>

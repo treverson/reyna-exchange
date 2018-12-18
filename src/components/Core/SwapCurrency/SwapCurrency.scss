@@ -1,0 +1,26 @@
+.swap-currency {
+  max-width: 526px;
+
+  padding: 11px;
+  border-radius: 5px;
+  background-color: #202020;
+  display: flex;
+  justify-content: space-between;
+}
+
+.swap-currency__separator {
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+
+  span {
+    position: relative;
+    transform: rotate(-90deg);
+
+    &:first-child {
+      right: -5px;
+      margin-left: -5px;
+    }
+  }
+}

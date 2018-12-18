@@ -5,8 +5,8 @@ import Home from './views/Home'
 // Account
 import AccountEntryPoint from './views/Account/AccountEntryPoint.vue'
 import AccountDashboard from './views/Account/AccountDashboard/AccountDashboard.vue'
-import AccountBuyAndSell from './views/Account/AccountBuyAndSell.vue'
-import AccountHistory from './views/Account/AccountHistory.vue'
+import AccountBuyAndSell from './views/Account/AccountBuyAndSell/AccountBuyAndSell.vue'
+import AccountHistory from './views/Account/AccountHistory/AccountHistory.vue'
 
 // Terminal
 import TerminalEntryPoint from './views/Terminal/TerminalEntryPoint.vue'
@@ -21,6 +21,9 @@ import AuthSignIn from './views/Auth/AuthSignIn/AuthSignIn.vue'
 // Verify
 import VerifyEmail from './views/Verify/VerifyEmail.vue'
 import VerifyPhone from './views/Verify/VerifyPhone.vue'
+
+// Swap
+import PageSwap from './views/Inner/PageSwap/PageSwap'
 
 Vue.use(Router)
 
@@ -92,6 +95,11 @@ export default new Router({
         {
             path: '/verify/phone/:phoneToken',
             component: VerifyPhone
+        },
+        {
+            path: '/swap',
+            name: 'swap',
+            component: PageSwap
         }
     ]
 })

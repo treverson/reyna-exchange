@@ -2,25 +2,21 @@
   <Page theme="account">
     <div :class="['account-dashboard']">
       <account-header />
-        <div v-if="window.width <= 712" class="account__section-tabs">
-          <div class="account__section-tabs-wrap">
-            <button :class="{ 'account__section-tab': true, 'account__section-tab--isActive-yes': currentTab === 0 }" @click="changeCurrentTab(0)">Getting Start</button>
-            <button :class="{ 'account__section-tab': true, 'account__section-tab--isActive-yes': currentTab === 1 }" @click="changeCurrentTab(1)">My funds</button>
-            <button :class="{ 'account__section-tab': true, 'account__section-tab--isActive-yes': currentTab === 2 }" @click="changeCurrentTab(2)">Available currencies</button>
-          </div>
-        </div>
+      <header-accordion-navigation />
         <account-container>
-          <div :class="['account-dashboard__grid']">
-            <div v-if="getSectionVisible(0)" :class="['account-dashboard__item', 'account-dashboard__item--type-getting-start']">
-              <getting-start />
+          <header-accordion ref="headerAccordion" :current-item="0">
+            <div :class="['account-dashboard__grid']">
+              <header-accordion-item section-title="Getting start" :class="['account-dashboard__item', 'account-dashboard__item--type-getting-start']">
+                <getting-start />
+              </header-accordion-item>
+              <header-accordion-item section-title="Available currencies" :class="['account-dashboard__item', 'account-dashboard__item--type-available-currencies']">
+                <available-currencies table-name="Available currencies" :table-data="tableData" :toggle-actions="true" />
+              </header-accordion-item>
+              <header-accordion-item section-title="My funds" :class="['account-dashboard__item', 'account-dashboard__item--type-my-funds']">
+                <my-funds />
+              </header-accordion-item>
             </div>
-            <div v-if="getSectionVisible(1)" :class="['account-dashboard__item', 'account-dashboard__item--type-available-currencies']">
-              <available-currencies table-name="Available currencies" :table-data="tableData" :toggle-actions="true" />
-            </div>
-            <div v-if="getSectionVisible(2)" :class="['account-dashboard__item', 'account-dashboard__item--type-my-funds']">
-              <my-funds />
-            </div>
-          </div>
+          </header-accordion>
         </account-container>
       <account-footer />
     </div>
@@ -35,10 +31,16 @@
   import GettingStart from '@/components/Account/GettingStart/GettingStart'
   import AvailableCurrencies from '@/components/Account/AvailableCurrencies/AvailableCurrencies'
   import MyFunds from '@/components/Account/MyFunds/MyFunds'
+  import HeaderAccordion from "@/components/Core/HeaderAccordion/HeaderAccordion.vue"
+  import HeaderAccordionItem from "@/components/Core/HeaderAccordion/components/HeaderAccordionItem/HeaderAccordionItem.vue"
+  import HeaderAccordionNavigation from "@/components/Core/HeaderAccordion/components/HeaderAccordionNavigation/HeaderAccordionNavigation.vue"
 
   export default {
     name: 'accountDashboard',
     components: {
+        HeaderAccordion,
+        HeaderAccordionItem,
+        HeaderAccordionNavigation,
         Page,
         AccountHeader,
         AccountFooter,
@@ -1375,29 +1377,10 @@
                     ]
                 }
             ],
-            currentTab: 0,
-            window: {
-                width: 0,
-                height: 0
-            }
         }
     },
-    methods: {
-        changeCurrentTab: function (id) {
-            this.currentTab = id
-        },
-        handleResize() {
-            this.window.width = window.innerWidth;
-            this.window.height = window.innerHeight;
-        },
-        getSectionVisible: function () {
-            return true
-        }
-    },
-    created() {
-        window.addEventListener('resize', this.handleResize)
-        this.handleResize();
-    }
+    methods: {},
+    created() {}
   }
 </script>
 

@@ -2,33 +2,38 @@
   <Page theme="account">
     <div class="account-history">
       <Header />
+      <header-accordion-navigation />
 
         <AccountContainer>
-          <div class="account-history__grid">
 
-            <div class="account-history__column-history-filter">
+          <header-accordion>
+            <div class="account-history__grid">
 
-              <!-- history-filter -->
-              <div class="account-history__history-filter">
-                <HistoryFilter />
+              <div class="account-history__column-history-filter">
+
+                <!-- history-filter -->
+                <header-accordion-item section-title="Filter" class="account-history__history-filter">
+                  <HistoryFilter />
+                </header-accordion-item>
+
+                <!-- export orders -->
+                <header-accordion-item section-title="Export" class="account-history__export-orders">
+                  <ExportOrders />
+                </header-accordion-item>
+                <!-- export orders end -->
+
+                <!-- history-filter end -->
               </div>
 
-              <!-- export orders -->
-              <div class="account-history__export-orders">
-                <ExportOrders />
-              </div>
-              <!-- export orders end -->
+              <!-- available-currencies -->
+              <header-accordion-item section-title="Transactions" class="account-history__available-currencies">
+                <AvailableCurrencies table-name="Transactions" :current-item="1" :table-data="tableData" :toggle-actions="false" />
+              </header-accordion-item>
+              <!-- available-currencies end -->
 
-              <!-- history-filter end -->
             </div>
+          </header-accordion>
 
-            <!-- available-currencies -->
-            <div class="account-history__available-currencies">
-              <AvailableCurrencies table-name="Transactions" :current-item="1" :table-data="tableData" :toggle-actions="false" />
-            </div>
-            <!-- available-currencies end -->
-
-          </div>
         </AccountContainer>
 
       <Footer />
@@ -44,6 +49,9 @@
   import AvailableCurrencies from '@/components/Account/AvailableCurrencies/AvailableCurrencies'
   import HistoryFilter from '@/components/Account/HistoryFilter/HistoryFilter'
   import ExportOrders from '@/components/Account/ExportOrders/ExportOrders'
+  import HeaderAccordion from "@/components/Core/HeaderAccordion/HeaderAccordion.vue"
+  import HeaderAccordionItem from "@/components/Core/HeaderAccordion/components/HeaderAccordionItem/HeaderAccordionItem.vue"
+  import HeaderAccordionNavigation from "@/components/Core/HeaderAccordion/components/HeaderAccordionNavigation/HeaderAccordionNavigation.vue"
 
   export default {
     name: 'accountHistory',
@@ -54,7 +62,10 @@
         AccountContainer,
         AvailableCurrencies,
         HistoryFilter,
-        ExportOrders
+        ExportOrders,
+        HeaderAccordion,
+        HeaderAccordionItem,
+        HeaderAccordionNavigation
     },
     data () {
         return {
@@ -432,28 +443,5 @@
 </script>
 
 <style lang="scss">
-  .account-history__grid {
-    margin-top: 13px;
-
-    display: flex;
-    align-items: flex-start;
-  }
-
-  .account-history__history-filter {
-    margin-bottom: 16px;
-  }
-
-  .account-history__column-history-filter {
-    flex-shrink: 0;
-    max-width: 256px;
-    width: 100%;
-
-    margin-right: 16px;
-  }
-
-  .account-history__available-currencies {
-    flex-shrink: 0;
-    max-width: 985px;
-    width: 100%;
-  }
+  @import "AccountHistory";
 </style>

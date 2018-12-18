@@ -1,0 +1,54 @@
+@import "../../../components/Account/AccountContainer/cointainer-size";
+
+.account-buy-and-sell__grid {
+  margin-top: 13px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.account-buy-and-sell__available-currencies {
+  flex-shrink: 0;
+  max-width: 711px;
+  width: 100%;
+}
+
+.account-buy-and-sell__trade-amount {
+  flex-shrink: 0;
+  max-width: 256px;
+  width: 100%;
+}
+
+.account-buy-and-sell__trade-details {
+  flex-shrink: 0;
+  max-width: 256px;
+  width: 100%;
+}
+
+@media (max-width: $containerLarge) {
+  .account-buy-and-sell__grid {
+    flex-wrap: wrap;
+  }
+
+  .account-buy-and-sell__available-currencies {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .account-buy-and-sell__trade-amount {
+    max-width: 257px;
+  }
+
+  .account-buy-and-sell__trade-details {
+    max-width: calc(100% - 257px - 15px);
+  }
+}
+
+@media (max-width: $containerSmall) {
+  .account-buy-and-sell__available-currencies,
+  .account-buy-and-sell__trade-amount,
+  .account-buy-and-sell__trade-details {
+    max-width: 100%;
+  }
+}

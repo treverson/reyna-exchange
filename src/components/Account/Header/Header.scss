@@ -26,6 +26,9 @@
 .account-header__menu {
   height: 100%;
   margin-right: auto;
+
+  padding: 0 17px;
+  box-sizing: border-box;
 }
 
 .account-header__wrapper {
@@ -70,11 +73,7 @@
 
   &:hover:not(.router-link-active),
   &:focus:not(.router-link-active) {
-    border-color: #D21616;
-
-    .account-header__icon {
-      color: #D21616;
-    }
+    border-color: #000000;
   }
 }
 
