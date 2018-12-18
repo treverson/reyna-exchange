@@ -51,7 +51,7 @@
 
     .data-list-selectable__icon {
         color: rgba(0, 0, 0, 0.8);
-        font-size: 9px;
+        font-size: 5px;
 
         transition: .20s ease;
     }

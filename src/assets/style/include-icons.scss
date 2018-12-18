@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('assets/fonts/icons/icomoon.eot?p79d3w');
-  src:  url('assets/fonts/icons/icomoon.eot?p79d3w#iefix') format('embedded-opentype'),
-  url('assets/fonts/icons/icomoon.ttf?p79d3w') format('truetype'),
-  url('assets/fonts/icons/icomoon.woff?p79d3w') format('woff'),
-  url('assets/fonts/icons/icomoon.svg?p79d3w#icomoon') format('svg');
+  src:  url('assets/fonts/icons/icomoon.eot?lu07ko');
+  src:  url('assets/fonts/icons/icomoon.eot?lu07ko#iefix') format('embedded-opentype'),
+  url('assets/fonts/icons/icomoon.ttf?lu07ko') format('truetype'),
+  url('assets/fonts/icons/icomoon.woff?lu07ko') format('woff'),
+  url('assets/fonts/icons/icomoon.svg?lu07ko#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,37 +24,41 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-up:before {
-  content: "\e90a";
-}
-.icon-password:before {
-  content: "\e909";
-}
-.icon-small-arrow:before {
-  content: "\e908";
-}
-.icon-good:before {
-  content: "\e907";
-}
 .icon-advanced-view:before {
   content: "\e900";
 }
-.icon-buy-and-sell:before {
+.icon-arrow-up:before {
   content: "\e901";
 }
-.icon-dashboard:before {
+.icon-buy-and-sell:before {
   content: "\e902";
 }
-.icon-heavy-arrow-down:before {
+.icon-dashboard:before {
   content: "\e903";
 }
-.icon-history:before {
+.icon-good:before {
   content: "\e904";
 }
-.icon-search:before {
+.icon-heavy-arrow-down:before {
   content: "\e905";
 }
-.icon-table-filter:before {
+.icon-history:before {
   content: "\e906";
 }
+.icon-locked:before {
+  content: "\e907";
+}
+.icon-password:before {
+  content: "\e908";
+}
+.icon-search:before {
+  content: "\e909";
+}
+.icon-small-arrow:before {
+  content: "\e90a";
+}
+.icon-table-filter:before {
+  content: "\e90b";
+}
+
 

@@ -24,6 +24,7 @@
                 </primary-inner-block-section>
                 trc10: {{ rey10 }}
                 trc20: {{ rey20 }}
+                status: {{ status }}
             </account-container>
         </div>
     </primary-inner>
@@ -56,7 +57,8 @@
             return {
                 address: 'Loading...',
                 rey10: 0,
-                rey20: 0
+                rey20: 0,
+                status: ''
             }
         },
         methods: {
@@ -64,27 +66,33 @@
                 return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
             },
             swapTokens: async function () {
-                return true
+                this.status = 'Swap just started'
 
                 let acct = await window.tronWeb.trx.getUnconfirmedAccount()
                 let balance = 0
+
                 if ('asset' in acct) {
-                    var arrayLength = acct['asset'].length
-                    for (var i = 0; i < arrayLength; i++) {
-                        var asset = acct['asset'][i]
-                        if (asset['key'] == "REY") {
-                            balance = asset['value']
-                            break
+                    let arrayLength = acct['asset'].length;
+                    for (let i = 0; i < arrayLength; i++) {
+                        let asset = acct['asset'][i];
+                        if (asset['key'] === "ReynaToken") {
+                            balance = asset['value'];
+                            break;
                         }
                     }
                 }
 
-                if (balance == 0) return true
+                if (balance === 0) {
+                    this.status = 'Balance of ReynaToken is 0. Nothing to swap.'
+                    return true
+                }
+
+                this.status = 'Balance of ReynaToken is ' + balance + '. Swapping...'
 
                 let to = "TQH3r7WyteKVy1cskhc7BiqbNYSyiyvwPS"
 
-                let transaction = await TronWeb.transactionBuilder.sendToken(to, balance, "REY")
-                let signedTransaction = await TronWeb.trx.sign(transaction)
+                let transaction = await tronWeb.transactionBuilder.sendToken(to, balance, "ReynaToken");
+                let signedTransaction = await tronWeb.trx.sign(transaction);
 
                 let depositAmount = balance
                 let playerAddress = window.tronWeb.defaultAddress.hex
@@ -96,14 +104,16 @@
                 }
 
                 axios.post('/swap1020', postData).then(response => {
-                    alert("REY Token Swap Successful")
                     console.log(response)
+
+                    this.status = 'REY Token Swap Successful'
 
                     this.rey10 = 0
                     this.rey20 = this.numberWithCommas(this.rey10) + " REY"
                 }).catch(error => {
-                    alert("Failed, please retry")
                     console.log(error.response)
+
+                    this.status = 'REY Token Swap Failed'
                 })
             }
         },

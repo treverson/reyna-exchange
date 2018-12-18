@@ -1,6 +1,6 @@
 <template>
     <div :class="['form-input']">
-        <input v-model="object.model" :type="object.type" :class="objectClass" :placeholder="object.placeholder" @keyup="onChangeModel()">
+        <input v-model="object.model" :type="object.type" :class="objectClass" :placeholder="object.placeholder" @keyup="onChangeModel()" :disabled="object.disabled">
         <button v-if="type === 'password'" @click="handlerType(type, 'text')" :class="{ 'form-input__password': true, 'form-input__password--isActive-true': object.type === 'text' }">
             <span :class="['form-input__icon', 'icon-password']"></span>
         </button>
@@ -23,6 +23,12 @@
             responsiveKey: {
                 type: String,
                 required: true
+            },
+            value: {
+                type: String
+            },
+            disabled: {
+                type: Boolean
             }
         },
         data () {
@@ -31,9 +37,10 @@
                 object: {
                     isCorrect: true,
                     key: this.responsiveKey,
-                    model: '',
+                    model: this.value,
                     type: this.type,
-                    placeholder: this.placeholder
+                    placeholder: this.placeholder,
+                    disabled: this.disabled
                 }
             }
         },
@@ -68,7 +75,8 @@
                 return {
                     'form-input__object': true,
                     'form-input__object--type-password': this.type === 'password',
-                    'form-input__object--emailNotCorrect-yes': this.type === 'email' && this.object.isCorrect === false
+                    'form-input__object--emailNotCorrect-yes': this.type === 'email' && this.object.isCorrect === false,
+                    'form-input__object--type-Disabled': this.object.disabled === true,
                 }
             }
         }

@@ -8,6 +8,14 @@
             <span :class="['icon-heavy-arrow-down', 'account-profile__arrow']"></span>
         </button>
         <div :class="{ 'account-profile__actions': true, 'account-profile__actions--dropDown-active': isDropDownMenu === true }">
+            <div :class="['account-profile__address-wrap']">
+                <span :class="['account-profile__address-title']">
+                    My address
+                </span>
+                <span :class="['account-profile__address']">
+                    TYQrtofWPEZCEdx...
+                </span>
+            </div>
             <router-link to="/account/settings" :class="['account-profile__link']">
                 Settings
             </router-link>

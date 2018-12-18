@@ -1,0 +1,331 @@
+.AccountSettings {
+  overflow: hidden;
+  border-radius: 5px;
+  margin-top: 13px;
+
+  background-color: #fff;
+  border: 1px solid #D9D9D9;
+}
+
+.AccountSettings__heading {
+  width: 100%;
+  height: 50px;
+
+  margin: 0;
+  color: #000000;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
+
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  letter-spacing: .3px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #fff;
+
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.AccountSettings__tabs {
+  width: 100%;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.AccountSettings__tab {
+  height: 100%;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+  font-size: 12px;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .15s ease;
+
+  border-bottom: 1px solid transparent;
+}
+
+.AccountSettings__tab:not(.AccountSettings_isCurrent_yes):hover {
+  border-color: #000000;
+}
+
+.AccountSettings_isCurrent_yes {
+  color: #D21616;
+  font-weight: bold;
+  border-color: #D21616;
+}
+
+.AccountSettings__section {
+  padding: 30px 20px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #D9D9D9;
+  }
+}
+
+.AccountSettings__item {
+  max-width: 635px;
+
+  display: flex;
+  align-items: flex-start;
+
+  .form-input {
+    max-width: 347px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+
+.AccountSettings__item_alignRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.AccountSettings__item_styleFluid {
+  max-width: none;
+}
+
+.AccountSettings__item_withoutSidebar {
+  margin-left: 288px;
+}
+
+.AccountSettings__headingContent {
+  max-width: 288px;
+  width: 100%;
+}
+
+.AccountSettings__sectionHeading {
+  color: #000000;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+
+  .icon-locked {
+    color: #00B121;
+
+    margin-left: 8px;
+  }
+}
+
+.AccountSettings__sectionDesc {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.AccountSettings__submitButton {
+  max-width: 153px;
+  width: 100%;
+
+  .user-button__content {
+    width: 100%;
+    display: block;
+  }
+}
+
+.AccountSettings__contentGrid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.AccountSettings__gridItem {
+  &:not(:last-child) {
+    margin-right: 17px;
+  }
+}
+
+.AccountSettings__additionalInformation {
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 12px;
+  letter-spacing: .3px;
+  line-height: 16px;
+
+  margin-left: 20px;
+}
+
+.AccountSettings__centerContent {
+  max-width: 347px;
+  width: 100%;
+}
+
+.AccountSettings__itemBirthMonth {
+  width: 150px;
+}
+
+.AccountSettings__itemBirthDay {
+  width: 66px;
+}
+
+.AccountSettings__itemBirthYear {
+  width: 71px;
+}
+
+.AccountSettings__userAvatar {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 5px;
+
+  background-image: url('../../../assets/img/no-avatar.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-color: #F5F5F5;
+}
+
+.AccountSettings__profileAvatar {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 44px;
+}
+
+.AccountSettings__pictureSection {
+  display: flex;
+  flex-direction: column;
+  margin-left: 17px;
+}
+
+.AccountSettings__pictureTitle {
+  color: #000;
+  font-size: 14px;
+  letter-spacing: .3px;
+  line-height: 19px;
+  font-weight: 500;
+}
+
+.AccountSettings__pictureDesk {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 12px;
+  letter-spacing: .3px;
+  line-height: 16px;
+}
+
+.AccountSettings__pictureUpload {
+  width: 165px;
+  height: 39px;
+
+  margin-left: 59px;
+
+  .user-button__content {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.AccountSettings__sectionProfile {
+  margin-left: 60px;
+}
+
+.AccountSettings__sectionColumn {
+  flex-shrink: 0;
+  max-width: 635px;
+  width: 100%;
+}
+
+.AccountSettings__groupColumn {
+  display: flex;
+  align-items: flex-start;
+}
+
+.AccountSettings__profilePassword {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.AccountSettings__profilePasswordTitle {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .3px;
+  line-height: 16px;
+}
+
+.AccountSettings__profilePasswordChange {
+  width: 206px;
+  height: 39px;
+
+  .user-button__content {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.AccountSettings__smallSizeContent {
+  max-width: 300px;
+}
+
+.AccountSettings__smallSizeContent {
+  max-width: 588px;
+}
+
+.AccountSettings__notificationsCheckboxItem {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.AccountSettings__phone {
+  display: inline-block;
+
+  color: #000;
+  font-size: 10px;
+  line-height: 18px;
+  padding: 0 10px;
+
+  border-radius: 3px;
+  margin-left: 27px;
+}
+
+.AccountSettings__phone_verified {
+  background-color: #C5EFCD;
+}
+
+.AccountSettings__phoneChange {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.AccountSettings__phoneNumber {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.AccountSettings__phoneChangeButton {
+  width: 165px;
+  height: 39px;
+
+  .user-button__content {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.AccountSettings__item_contentCenter {
+  align-items: center;
+}

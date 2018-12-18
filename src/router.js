@@ -7,6 +7,7 @@ import AccountEntryPoint from './views/Account/AccountEntryPoint.vue'
 import AccountDashboard from './views/Account/AccountDashboard/AccountDashboard.vue'
 import AccountBuyAndSell from './views/Account/AccountBuyAndSell/AccountBuyAndSell.vue'
 import AccountHistory from './views/Account/AccountHistory/AccountHistory.vue'
+import AccountSettings from './views/Account/AccountSettings/AccountSettings.vue'
 
 // Terminal
 import TerminalEntryPoint from './views/Terminal/TerminalEntryPoint.vue'
@@ -53,6 +54,11 @@ export default new Router({
                     path: 'history',
                     name: 'accountHistory',
                     component: AccountHistory
+                },
+                {
+                    path: 'settings',
+                    name: 'AccountSettings',
+                    component: AccountSettings
                 }
             ]
         },

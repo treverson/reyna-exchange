@@ -1,0 +1,56 @@
+.FormRadio {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+.FormRadio__label {
+  color: #000;
+  font-size: 12px;
+  line-height: 16px;
+
+  margin-left: 9px;
+}
+
+.FormRadio__input {
+  display: none;
+
+  &:checked + .FormRadio__custom:before {
+    opacity: 1;
+  }
+}
+
+.FormRadio__custom {
+  position: relative;
+
+  width: 12px;
+  height: 12px;
+
+  border: 1px solid #000;
+  background-color: #fff;
+
+  border-radius: 50%;
+
+  &:before {
+    content: "";
+
+    opacity: 0;
+    transition: .15s ease;
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+
+    border-radius: 50%;
+    background-color: #000;
+  }
+}

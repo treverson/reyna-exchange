@@ -33,7 +33,8 @@
                 return {
                     'user-button__content': true,
                     'user-button__content--theme-red': this.theme === 'red',
-                    'user-button__content--theme-green': this.theme === 'green'
+                    'user-button__content--theme-green': this.theme === 'green',
+                    'user-button__content--theme-gray': this.theme === 'gray'
                 }
             }
         }

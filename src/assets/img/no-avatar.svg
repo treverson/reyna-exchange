@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f5f5f5;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #dbdbdb;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="photo286644657502398628" class="cls-1" width="60" height="60" rx="5" transform="translate(742 215)"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_2" data-name="Mask Group 2" class="cls-2" transform="translate(-742 -215)">
+    <g id="male" transform="translate(746.358 226)">
+      <path id="Path_69" data-name="Path 69" class="cls-3" d="M31.693,49.669c-1.254-.2-1.283-3.647-1.283-3.647A17.555,17.555,0,0,0,34.9,37.469c2.16,0,3.495-5.215,1.334-7.049.091-1.931,2.777-15.161-10.824-15.161S14.493,28.489,14.583,30.42c-2.16,1.835-.826,7.049,1.334,7.049A17.554,17.554,0,0,0,20.4,46.022s-.029,3.448-1.283,3.647C15.083,50.312,0,56.964,0,64.259H50.815C50.815,56.964,35.732,50.312,31.693,49.669Z" transform="translate(0 -15.259)"/>
+    </g>
+  </g>
+</svg>
