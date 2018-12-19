@@ -1,6 +1,6 @@
 <template>
     <header :class="['terminal-header']">
-        <logo to="/terminal" :class="['terminal-header__logo']" />
+        <logo to="/terminal" :class="['terminal-header__logo']" theme="white" />
         <terminal-simple-calendar :class="['terminal-header__calendar']" />
         <terminal-project-status :class="['terminal-header__status']" />
         <account-profile user-name="Georg Pavlov" avatar-url="https://pp.userapi.com/c830308/v830308045/13f4f6/RwaDj5qlQwQ.jpg?ava=1" theme="dark" :class="['terminal-header__profile']" />

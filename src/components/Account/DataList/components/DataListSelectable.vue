@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    export default {
+    export default {/* eslint-disable */
         name: "DataListSelectable",
         props: {
             title: {
@@ -22,7 +22,7 @@
         methods: {
             changeActiveStatus: function () {
                 this.isActive = !this.isActive
-                this.$parent.$data.isActive = !this.$parent.$data.isActive
+                this.$parent.$data.isActive = !this.$parent.$data['isActive']
             }
         }
     }

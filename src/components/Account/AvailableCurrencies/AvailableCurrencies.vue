@@ -6,7 +6,7 @@
         <div :class="['available-currencies__filter']">
             <ul :class="['available-currencies__menu']">
                 <!-- menu item -->
-                <li v-for="item in tableData" v-bind:key="item.id" :class="['available-currencies__item']">
+                <li v-for="item in objectData" v-bind:key="item.id" :class="['available-currencies__item']">
                     <!-- menu button -->
                     <button @click="changeCurrentTableItem(item.id)" :class="{ 'available-currencies__button': true, 'available-currencies__button--isCurrent-yes': item.id === currentTableItem }">
                         {{ item.categoryName }}
@@ -20,7 +20,7 @@
             </div>
         </div>
         <!-- content -->
-        <div v-for="item in tableData" v-bind:key="item.id" v-show="item.id === currentTableItem" :class="['available-currencies__content']">
+        <div v-for="item in objectData" v-bind:key="item.id" v-show="item.id === currentTableItem" :class="['available-currencies__content']">
             <div :class="['available-currencies__inner']">
 
                 <!-- table -->
@@ -192,7 +192,8 @@
             return {
                 currentTableItem: this.currentItem,
                 fieldModel: '',
-                selected: []
+                selected: [],
+                objectData: this.tableData
             }
         },
         methods: {
@@ -200,22 +201,10 @@
                 this.currentTableItem = id
             },
             setRowSelectable: function (id) {
-                this.tableData[this.currentTableItem].rows[id].selected = !this.tableData[this.currentTableItem].rows[id].selected
-            },
-            autoload: function () {
-                this.tableData.forEach(function (element) {
-                    if (element.isSelectable === true) {
-
-                        element.rows.forEach(function (row) {
-                            row.selected = false
-                        })
-
-                    }
-                })
+                if ('selected' in this.objectData[this.currentTableItem].rows[id]) {
+                    this.objectData[this.currentTableItem].rows[id].selected = !this.objectData[this.currentTableItem].rows[id].selected
+                }
             }
-        },
-        mounted () {
-            this.autoload()
         },
         computed: {
 
@@ -226,7 +215,7 @@
 
                 let result = []
                 let searchData = this.fieldModel
-                let currentData = this.tableData[this.currentTableItem].rows
+                let currentData = this.objectData[this.currentTableItem].rows
 
                 if (searchData !== '') { // если в строке поиска что-то есть
                     currentData.filter(function (element) {

@@ -83,20 +83,20 @@
                     0.00000 TRX
                 </span>
             </div>
-            <button-component to="/terminal" theme="green" :class="['terminal-order__button']">
+            <user-button to="/terminal" theme="green" :class="['terminal-order__button']">
                 Buy
-            </button-component>
+            </user-button>
         </div>
     </div>
 </template>
 
 <script>
-    import ButtonComponent from '@/components/Account/UI/Button'
+    import UserButton from '@/components/Core/UserButton/UserButton'
 
     export default {
         name: "TerminalOrder",
         components: {
-            ButtonComponent
+            UserButton
         },
         data () {
             return {

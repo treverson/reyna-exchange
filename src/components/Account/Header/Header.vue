@@ -12,7 +12,7 @@
                         <span :class="['icon-buy-and-sell', 'account-header__icon']"></span>
                         Buy & Sell
                     </router-link>
-                    <router-link to="/account/advanced-view" :class="['account-header__link']">
+                    <router-link to="/terminal" :class="['account-header__link']">
                         <span :class="['icon-advanced-view', 'account-header__icon']"></span>
                         Advanced View
                     </router-link>

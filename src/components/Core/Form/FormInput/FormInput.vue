@@ -1,6 +1,6 @@
 <template>
     <div :class="['form-input']">
-        <input v-model="object.model" :type="object.type" :class="objectClass" :placeholder="object.placeholder" @keyup="onChangeModel()" :disabled="object.disabled">
+        <input v-model="object.model" :type="object.type" :class="objectClass" :placeholder="object.placeholder" @keyup="onChangeModel()" @change="handlerChange()" :disabled="object.disabled">
         <button v-if="type === 'password'" @click="handlerType(type, 'text')" :class="{ 'form-input__password': true, 'form-input__password--isActive-true': object.type === 'text' }">
             <span :class="['form-input__icon', 'icon-password']"></span>
         </button>
@@ -46,18 +46,24 @@
         },
         methods: {
             handlerType: function (oldType, newType) {
+
                 if (this.object.type === oldType) {
                     this.object.type = newType
-                } else {
+                }
+
+                else {
                     this.object.type = oldType
                 }
+
             },
             handlerChange: function () {
                 if (this.type === 'email') {
 
-                    if (!this.validateEmail(this.object.model)) {
+                    if (!this.validateEmail(this.object.model) && this.object.model.length > 0  ) {
                         this.object.isCorrect = false
-                    } else {
+                    }
+
+                    else {
                         this.object.isCorrect = true
                     }
                 }

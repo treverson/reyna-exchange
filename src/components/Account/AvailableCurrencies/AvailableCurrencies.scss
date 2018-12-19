@@ -104,7 +104,7 @@
     display: flex;
     align-items: center;
 
-    content: "\e905";
+    content: "\e909";
     font-family: 'icomoon';
 
     color: #959595;
@@ -349,10 +349,10 @@
   background-color: #F6F6F6;
 
   .available-currencies__table-currency-icon {
-    background-color: #F6F6F6;
+    background-color: #00B121;
 
     &:before {
-      content: "\e907";
+      content: "\e904";
       font-family: 'icomoon';
 
       width: 100%;
@@ -365,6 +365,10 @@
       color: #fff;
       font-size: 7px;
     }
+  }
+
+  .available-currencies__table-price-convertPrice {
+    background-color: #FFFFFF;
   }
 }
 

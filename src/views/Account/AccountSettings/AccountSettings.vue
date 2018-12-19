@@ -492,7 +492,7 @@
     import Container from "@/components/Account/AccountContainer/AccountContainer";
     import FormInput from "@/components/Core/Form/FormInput/FormInput";
     import UserButton from "@/components/Core/UserButton/UserButton";
-    import DataList from "@/components/Account/UI/DataList/DataList";
+    import DataList from "@/components/Account/DataList/DataList";
     import FormCheckbox from "@/components/Core/Form/FormCheckbox/FormCheckbox";
     import FormRadio from "@/components/Core/Form/FormRadio/FormRadio";
     import FormGroupRadio from "@/components/Core/Form/FormGroupRadio/FormGroupRadio";

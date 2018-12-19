@@ -41,6 +41,10 @@ export default new Router({
             component: AccountEntryPoint,
             children: [
                 {
+                    path: '',
+                    redirect: 'dashboard'
+                },
+                {
                     path: 'dashboard',
                     name: 'accountDashboard',
                     component: AccountDashboard

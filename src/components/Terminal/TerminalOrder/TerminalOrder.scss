@@ -252,4 +252,9 @@
 .terminal-order__button {
   display: block;
   text-align: center;
+
+  .user-button__content {
+    width: 100%;
+    padding: 0;
+  }
 }

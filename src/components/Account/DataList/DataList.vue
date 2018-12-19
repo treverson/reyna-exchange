@@ -84,11 +84,9 @@
                 required: true
             }
         },
-
         components: {
             DataListSelectable
         },
-
         data () {
             return {
                 isActive: false,
@@ -96,18 +94,15 @@
                 currentItem: 0
             }
         },
-
         methods: {
             changeCurrentItem: function (id) {
                 this.currentItem = id
                 this.onClose()
             },
             onClose: function () {
-                /* eslint-disable */
                 this.isActive = false
             }
         },
-
         computed: {
             /*
              *  Функция фильтрует данные
@@ -135,6 +130,27 @@
                     }
                 })
             }
+        },
+        watch: {
+
+            isActive: function (value) {
+
+                if (value === true) {
+
+                    let currentID = this._uid
+
+                    this.$parent.$children.forEach((element) => {
+
+                        if (element['_uid'] !== currentID) {
+                            element.$data['isActive'] = false
+                        }
+
+                    })
+
+                }
+
+            }
+
         }
     }
 </script>
@@ -339,7 +355,7 @@
             display: flex;
             align-items: center;
 
-            content: "\e905";
+            content: "\e909";
             font-family: 'icomoon';
 
             color: #F65454;

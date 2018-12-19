@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="to" class="primary-logo">
+    <router-link :to="to" :class="objectClass">
         Exchange
     </router-link>
 </template>
@@ -11,6 +11,17 @@
             to: {
                 type: String,
                 required: true
+            },
+            theme: {
+                type: String
+            }
+        },
+        computed: {
+            objectClass: function () {
+                return {
+                    'primary-logo': true,
+                    'primary-logo--theme-white': this.theme === 'white'
+                }
             }
         }
     }

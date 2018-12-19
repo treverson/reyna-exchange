@@ -1,6 +1,7 @@
 .account-profile {
   height: 100%;
   position: relative;
+  z-index: 999;
 }
 
 .account-profile--theme-light {
@@ -41,6 +42,10 @@
 
   .account-profile__username {
     color: #FFFFFF;
+  }
+
+  .account-profile__address-title {
+    color: #fff;
   }
 
   .account-profile__arrow {

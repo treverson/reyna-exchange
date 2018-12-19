@@ -1,6 +1,6 @@
 .form-checkbox {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   cursor: pointer;
 
   margin-top: -4px;
@@ -23,8 +23,6 @@
   width: 16px;
   height: 16px;
 
-  position: relative;
-  top: 4px;
   box-sizing: border-box;
 
   flex-shrink: 0;

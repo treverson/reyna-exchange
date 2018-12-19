@@ -86,6 +86,7 @@
                     rows: [
                         {
                             id: 0,
+                            selected: false,
                             content: [
                                 {
                                     id: 0,
@@ -104,6 +105,7 @@
                         },
                         {
                             id: 1,
+                            selected: false,
                             content: [
                                 {
                                     id: 0,
@@ -122,6 +124,7 @@
                         },
                         {
                             id: 2,
+                            selected: false,
                             content: [
                                 {
                                     id: 0,
@@ -140,6 +143,7 @@
                         },
                         {
                             id: 3,
+                            selected: false,
                             content: [
                                 {
                                     id: 0,
@@ -158,6 +162,7 @@
                         },
                         {
                             id: 4,
+                            selected: false,
                             content: [
                                 {
                                     id: 0,
@@ -196,6 +201,7 @@
                     rows: [
                         {
                             id: 0,
+                            selected: false,
                             content: [
                                 {
                                     id: 0,
@@ -214,6 +220,7 @@
                         },
                         {
                             id: 1,
+                            selected: false,
                             content: [
                                 {
                                     id: 0,
@@ -232,6 +239,7 @@
                         },
                         {
                             id: 2,
+                            selected: false,
                             content: [
                                 {
                                     id: 0,
@@ -250,6 +258,7 @@
                         },
                         {
                             id: 3,
+                            selected: false,
                             content: [
                                 {
                                     id: 0,
@@ -268,6 +277,7 @@
                         },
                         {
                             id: 4,
+                            selected: false,
                             content: [
                                 {
                                     id: 0,

@@ -188,8 +188,6 @@
                 }
             },
             validateDataForm: function () {
-                /* eslint-disable */
-
                 if (this.form.firstName.length <= 0) {
                     this.setFormErrorLabel(1)
                 }
@@ -214,11 +212,6 @@
                     if (this.isCreate === true) return true
 
                     this.isCreate = true
-
-                    console.log(this.form.email)
-                    console.log(this.form.password)
-                    console.log(this.form.firstName)
-                    console.log(this.form.lastName)
 
                     axios.post('https://api.reyna.ml/api/Customers/signup', {
                         email: this.form.email,
@@ -251,6 +244,7 @@
             }
         },
         mounted () {
+            /* eslint-disable */
             this.$on('response-input', function (response) {
                 this.form[response[0]] = response[1]
 

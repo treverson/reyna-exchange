@@ -53,7 +53,7 @@
 </template>
 
 <script>
-    import DataList from '@/components/Account/UI/DataList/DataList'
+    import DataList from '@/components/Account/DataList/DataList'
 
     export default {
         name: "HistoryFilter",
