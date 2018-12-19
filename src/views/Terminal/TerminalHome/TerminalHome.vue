@@ -1,8 +1,10 @@
 <template>
     <page theme="terminal">
         <terminal-header/>
-        <terminal-order :style="{ maxWidth: '256px' }" />
-        <terminal-table-history />
+        <container>
+            <terminal-order :style="{ maxWidth: '256px' }" />
+            <terminal-table-history />
+        </container>
     </page>
 </template>
 
@@ -11,6 +13,7 @@
     import TerminalHeader from '@/components/Terminal/TerminalHeader/TerminalHeader.vue'
     import TerminalOrder from '@/components/Terminal/TerminalOrder/TerminalOrder.vue'
     import TerminalTableHistory from '@/components/Terminal/TerminalTableHistory/TerminalTableHistory.vue'
+    import Container from '@/components/Account/AccountContainer/AccountContainer'
 
     export default {
         name: "TerminalHome",
@@ -18,7 +21,8 @@
             Page,
             TerminalHeader,
             TerminalOrder,
-            TerminalTableHistory
+            TerminalTableHistory,
+            Container
         }
     }
 </script>

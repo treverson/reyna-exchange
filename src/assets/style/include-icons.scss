@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-favorite:before {
+  content: "\e90c";
+}
 .icon-advanced-view:before {
   content: "\e900";
 }
