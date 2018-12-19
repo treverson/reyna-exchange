@@ -3,7 +3,7 @@
         <input type="radio" class="FormRadio__input" :checked="isFormChecked">
         <div class="FormRadio__custom"></div>
         <span class="FormRadio__label">
-            Any amount of digital currency
+            {{ title}}
         </span>
     </div>
 </template>
@@ -11,6 +11,16 @@
 <script>
     export default {
         name: "FormRadio",
+        props: {
+            responsiveKey: {
+                type: String,
+                required: true
+            },
+            title: {
+                type: String,
+                required: true
+            }
+        },
         data () {
             return {
                 isFormChecked: false
@@ -19,6 +29,8 @@
         methods: {
             changeFormStatus: function () {
                 this.isFormChecked = true
+
+                this.$parent.$emit('response-radio', this.responsiveKey)
             }
         }
     }

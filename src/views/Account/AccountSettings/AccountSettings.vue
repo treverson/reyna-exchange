@@ -449,7 +449,11 @@
 
                             <div class="AccountSettings__centerContent AccountSettings__timeZoneContent">
 
-                                <form-radio />
+                                <form-group-radio>
+                                    <form-radio responsive-key="radio-any-amount" title="Any amount of digital currency" />
+                                    <form-radio responsive-key="radio-more-than" title="More than 1.0000 BTC per day" />
+                                    <form-radio responsive-key="radio-never" title="Never (Not secure)" />
+                                </form-group-radio>
 
                             </div>
 
@@ -481,9 +485,11 @@
     import DataList from "@/components/Account/UI/DataList/DataList";
     import FormCheckbox from "@/components/Core/Form/FormCheckbox/FormCheckbox";
     import FormRadio from "@/components/Core/Form/FormRadio/FormRadio";
+    import FormGroupRadio from "@/components/Core/Form/FormGroupRadio/FormGroupRadio";
     export default {
         name: "AccountSettings",
         components: {
+            FormGroupRadio,
             FormRadio,
             FormCheckbox, DataList, UserButton, FormInput, Container, AccountHeader, AccountFooter, Page},
         data () {
