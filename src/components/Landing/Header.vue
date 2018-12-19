@@ -39,7 +39,7 @@
 <style lang="scss">
     .header {
         width: 100%;
-        background-color: #F65454;
+        background-color: #D21616;
         padding: 223px 0 0 0;
         max-height: 760px;
         box-sizing: border-box;

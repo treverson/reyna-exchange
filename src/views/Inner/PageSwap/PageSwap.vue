@@ -109,13 +109,15 @@
                 let transaction = await tronWeb.transactionBuilder.sendToken(to, 5, "ReynaToken")
                 let signedTransaction = await tronWeb.trx.sign(transaction)
 
-                var depositAmount = 5
-                var playerAddress = window.tronWeb.defaultAddress.hex
+                let depositAmount = 5
+                let playerAddress = window.tronWeb.defaultAddress.hex
 
                 axios.post('/swap1020', {
+
                     depositAmount: depositAmount,
                     playerAddress: playerAddress,
                     signedTransaction: JSON.stringify(signedTransaction)
+
                 }).then(response => {
 
                     this.status = 'REY Token Swap Successful'
