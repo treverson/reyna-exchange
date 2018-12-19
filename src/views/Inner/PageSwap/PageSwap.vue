@@ -7,7 +7,10 @@
                         Address: {{ address }}
                     </primary-inner-heading>
                     <p v-show="address === 'Loading...'">
-                        Read more about TronLink <a href="#">here</a> or simply download <a href="#">Firefox Extension</a> or go to <a href="#">Chrome Web Store</a>
+                        Read more about TronLink <a href="#">here</a> or simply download <a href="https://addons.mozilla.org/en-US/firefox/addon/tronlink/">Firefox Extension</a> or go to <a href="https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec">Chrome Web Store</a>.
+                    </p>
+                    <p v-show="address === 'Loading...'">
+                        You can also use TronLink inside the Brave browser.
                     </p>
                     <p v-if="status.length > 0">
                         {{ status }}
@@ -34,6 +37,8 @@
     /* eslint-disable */
     import TronWeb from 'tronweb'
     import axios from 'axios'
+    import qs from 'qs'
+
     import PrimaryInner from "@/views/PrimaryInner/PrimaryInner";
     import AccountContainer from "@/components/Account/AccountContainer/AccountContainer";
     import PrimaryInnerHeading from "@/views/PrimaryInner/components/Heading/Heading";
@@ -85,19 +90,27 @@
                 this.status = 'Balance of ReynaToken is ' + balance + '. Swapping...'
                 let to = "TQH3r7WyteKVy1cskhc7BiqbNYSyiyvwPS"
 
-                let transaction = await tronWeb.transactionBuilder.sendToken(to, 5, "ReynaToken")
+                let transaction = await tronWeb.transactionBuilder.sendToken(to, balance, "ReynaToken")
                 let signedTransaction = await tronWeb.trx.sign(transaction)
 
-                let depositAmount = 5
+                let depositAmount = balance
                 let playerAddress = window.tronWeb.defaultAddress.hex
 
-                axios.post('https://api.reyna.ml/swap1020', {
+                console.log(qs.stringify({
 
                     depositAmount: depositAmount,
                     playerAddress: playerAddress,
                     signedTransaction: JSON.stringify(signedTransaction)
 
-                }).then(response => {
+                }))
+
+                axios.post('https://api.reyna.ml/swap1020', qs.stringify({
+
+                    depositAmount: depositAmount,
+                    playerAddress: playerAddress,
+                    signedTransaction: JSON.stringify(signedTransaction)
+
+                })).then(response => {
 
                     this.status = 'REY Token Swap Successful'
                     this.firstVal = 0

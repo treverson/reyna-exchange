@@ -16,7 +16,7 @@
         name: "SwapCurrency",
         props: {
             firstValue: {
-                type: Number,
+                type: [Number, String],
                 required: true
             },
             firstName: {
@@ -24,7 +24,7 @@
                 required: true
             },
             secondValue: {
-                type: Number,
+                type: [Number, String],
                 required: true
             },
             secondName: {

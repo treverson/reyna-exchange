@@ -179,7 +179,7 @@
                             <!-- content -->
                             <div class="AccountSettings__centerContent">
 
-                                <div class="AccountSettings__contentGrid">
+                                <div class="AccountSettings__contentGrid AccountSettings__contentGrid_fixedFlex">
 
                                     <div class="AccountSettings__gridItem AccountSettings__itemBirthMonth">
                                         <data-list :data="dataBirthMonth" data-type="list" />
@@ -371,7 +371,7 @@
                         <!-- item end -->
 
                         <!-- item -->
-                        <div class="AccountSettings__item AccountSettings__item_alignRight AccountSettings__item_smallSizeContent">
+                        <div class="AccountSettings__item AccountSettings__item_alignRight AccountSettings__item_smallSizeContent AccountSettings__item_timeZoneContent">
                             <user-button type="button" theme="green" class="AccountSettings__submitButton">
                                 Save
                             </user-button>
@@ -460,6 +460,14 @@
                         </div>
                         <!-- item end -->
 
+                        <!-- item -->
+                        <div class="AccountSettings__item AccountSettings__item_alignRight AccountSettings__item_smallSizeContent">
+                            <user-button type="button" theme="green" class="AccountSettings__submitButton">
+                                Save
+                            </user-button>
+                        </div>
+                        <!-- item end -->
+
                     </div>
                     <!-- section end -->
 
@@ -494,7 +502,7 @@
             FormCheckbox, DataList, UserButton, FormInput, Container, AccountHeader, AccountFooter, Page},
         data () {
             return {
-                currentItem: 2,
+                currentItem: 1,
                 dataTimeZone: [
                     {
                         id: 0,

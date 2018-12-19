@@ -1,3 +1,5 @@
+@import "../../../components/Account/AccountContainer/cointainer-size";
+
 .AccountSettings {
   overflow: hidden;
   border-radius: 5px;
@@ -328,4 +330,107 @@
 
 .AccountSettings__item_contentCenter {
   align-items: center;
+}
+
+@media (max-width: $containerLarge) {
+  .AccountSettings__groupColumn {
+    flex-direction: column;
+  }
+
+  .AccountSettings__sectionProfile {
+    max-width: 635px;
+    width: 100%;
+
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .AccountSettings__pictureUpload {
+    margin-left: auto;
+  }
+
+  .AccountSettings__profileAvatar {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: $containerMedium) {
+  .AccountSettings__additionalInformation {
+    display: none;
+  }
+}
+
+@media (max-width: $containerSmall) {
+  .AccountSettings__tab {
+    padding: 0;
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .AccountSettings__item {
+    flex-direction: column;
+  }
+
+  .AccountSettings__headingContent {
+    margin-bottom: 8px;
+  }
+
+  .AccountSettings__profileAvatar {
+    flex-wrap: wrap;
+  }
+
+  .AccountSettings__pictureUpload {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+
+  .AccountSettings__profilePassword {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .AccountSettings__profilePasswordChange {
+    margin-top: 16px;
+  }
+
+  .AccountSettings__sectionProfile {
+    margin-top: 29px;
+  }
+
+  .AccountSettings__contentGrid:not(.AccountSettings__contentGrid_fixedFlex) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .AccountSettings__gridItem {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .AccountSettings__item_withoutSidebar {
+    margin-left: 0;
+  }
+
+  .AccountSettings__itemBirthMonth {
+    width: 102px;
+  }
+
+  .AccountSettings__itemBirthDay {
+    width: 66px;
+  }
+
+  .AccountSettings__itemBirthYear {
+    width: 71px;
+  }
+
+  .AccountSettings__item_timeZoneContent {
+    .AccountSettings__submitButton {
+      margin-left: auto;
+    }
+  }
 }
