@@ -96,14 +96,6 @@
                 let depositAmount = balance
                 let playerAddress = window.tronWeb.defaultAddress.hex
 
-                console.log(qs.stringify({
-
-                    depositAmount: depositAmount,
-                    playerAddress: playerAddress,
-                    signedTransaction: JSON.stringify(signedTransaction)
-
-                }))
-
                 axios.post('https://api.reyna.ml/swap1020', qs.stringify({
 
                     depositAmount: depositAmount,
