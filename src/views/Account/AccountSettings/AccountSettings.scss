@@ -433,4 +433,26 @@
       margin-left: auto;
     }
   }
+
+  .AccountSettings__GroupRadio {
+    margin-top: 14px;
+  }
+
+  .AccountSettings__GroupCheckbox {
+    margin-top: 10px;
+  }
+
+  .AccountSettings__phone_verified {
+    margin-left: 10px;
+  }
+
+  .AccountSettings__phoneChange {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .AccountSettings__phoneChangeButton {
+    margin-left: auto;
+    margin-top: 15px;
+  }
 }

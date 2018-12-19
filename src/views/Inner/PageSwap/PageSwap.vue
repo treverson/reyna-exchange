@@ -105,7 +105,6 @@
                 })).then(response => {
 
                     this.status = 'REY Token Swap Successful'
-                    this.firstVal = 0
 
                     console.log(response)
 

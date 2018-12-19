@@ -361,9 +361,11 @@
 
                             <div class="AccountSettings__centerContent AccountSettings__smallSizeContent">
 
-                                <form-checkbox responsive-key="Notifications-1" label="I send or receive digital currency" class="AccountSettings__notificationsCheckboxItem" />
-                                <form-checkbox responsive-key="Notifications-2" label="I receive merchant orders" class="AccountSettings__notificationsCheckboxItem" />
-                                <form-checkbox responsive-key="Notifications-3" label="There are recommended actions for my account" class="AccountSettings__notificationsCheckboxItem" />
+                                <div class="AccountSettings__GroupCheckbox">
+                                    <form-checkbox responsive-key="Notifications-1" label="I send or receive digital currency" class="AccountSettings__notificationsCheckboxItem" />
+                                    <form-checkbox responsive-key="Notifications-2" label="I receive merchant orders" class="AccountSettings__notificationsCheckboxItem" />
+                                    <form-checkbox responsive-key="Notifications-3" label="There are recommended actions for my account" class="AccountSettings__notificationsCheckboxItem" />
+                                </div>
 
                             </div>
 
@@ -449,7 +451,7 @@
 
                             <div class="AccountSettings__centerContent AccountSettings__timeZoneContent">
 
-                                <form-group-radio>
+                                <form-group-radio class="AccountSettings__GroupRadio">
                                     <form-radio responsive-key="radio-any-amount" title="Any amount of digital currency" />
                                     <form-radio responsive-key="radio-more-than" title="More than 1.0000 BTC per day" />
                                     <form-radio responsive-key="radio-never" title="Never (Not secure)" />
@@ -461,7 +463,7 @@
                         <!-- item end -->
 
                         <!-- item -->
-                        <div class="AccountSettings__item AccountSettings__item_alignRight AccountSettings__item_smallSizeContent">
+                        <div class="AccountSettings__item AccountSettings__item_alignRight AccountSettings__item_smallSizeContent AccountSettings__item_timeZoneContent">
                             <user-button type="button" theme="green" class="AccountSettings__submitButton">
                                 Save
                             </user-button>
@@ -502,7 +504,7 @@
             FormCheckbox, DataList, UserButton, FormInput, Container, AccountHeader, AccountFooter, Page},
         data () {
             return {
-                currentItem: 1,
+                currentItem: 0,
                 dataTimeZone: [
                     {
                         id: 0,
