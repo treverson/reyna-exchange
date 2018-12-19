@@ -1,11 +1,11 @@
 <template>
     <div :class="['swap-currency__section']">
-        <input v-model="fieldModel" type="number" placeholder="0" :class="['currency__section__field']">
+        <input type="number" placeholder="0" :class="['currency__section__field']" :disabled="disabled" :value="value">
         <div :class="['swap-currency__details']">
             <span :class="['swap-currency__currency-name']">
                 {{ currencyName }}
             </span>
-            <div :class="['swap-currency__counter']">
+            <div v-if="disabled === false" :class="['swap-currency__counter']">
                 <button :class="['swap-currency__count', 'swap-currency__count--type-up']" @click="addUnit()">
                     <span :class="['icon-small-arrow']"></span>
                 </button>
@@ -24,11 +24,18 @@
             currencyName: {
                 type: String,
                 required: true
+            },
+            value: {
+                type: Number,
+                required: true
+            },
+            disabled: {
+                type: Boolean
             }
         },
         data () {
             return {
-                fieldModel: ''
+                fieldModel: this.value
             }
         },
         methods: {
