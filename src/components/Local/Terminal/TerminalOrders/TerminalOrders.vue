@@ -110,36 +110,42 @@
                                 {
                                     id: 0,
                                     template: 'default',
+                                    width: '119px',
                                     content: '1.00000000',
                                     align: 'left',
                                 },
                                 {
                                     id: 1,
                                     template: 'default',
+                                    width: '51px',
                                     content: '0.00000000',
                                     align: 'right',
                                 },
                                 {
                                     id: 2,
                                     template: 'default',
+                                    width: '111px',
                                     content: '0.00004',
                                     align: 'right',
                                 },
                                 {
                                     id: 3,
                                     template: 'default',
+                                    width: '200px',
                                     content: '18-11-30 - 22:40:17',
                                     align: 'right',
                                 },
                                 {
                                     id: 4,
                                     template: 'type',
+                                    width: '133px',
                                     content: true,
                                     align: 'center',
                                 },
                                 {
                                     id: 5,
                                     template: 'status',
+                                    width: '74px',
                                     content: true,
                                     align: 'right',
                                 }
@@ -151,78 +157,43 @@
                                 {
                                     id: 0,
                                     template: 'default',
+                                    width: '119px',
                                     content: '1.00000000',
                                     align: 'left',
                                 },
                                 {
                                     id: 1,
                                     template: 'default',
+                                    width: '51px',
                                     content: '0.00000000',
                                     align: 'right',
                                 },
                                 {
                                     id: 2,
                                     template: 'default',
+                                    width: '111px',
                                     content: '0.00004',
                                     align: 'right',
                                 },
                                 {
                                     id: 3,
                                     template: 'default',
+                                    width: '200px',
                                     content: '18-11-30 - 22:40:17',
                                     align: 'right',
                                 },
                                 {
                                     id: 4,
                                     template: 'type',
+                                    width: '133px',
                                     content: true,
                                     align: 'center',
                                 },
                                 {
                                     id: 5,
                                     template: 'status',
-                                    content: false,
-                                    align: 'right',
-                                }
-                            ]
-                        },
-                        {
-                            id: 2,
-                            rowContent: [
-                                {
-                                    id: 0,
-                                    template: 'default',
-                                    content: '1.00000000',
-                                    align: 'left',
-                                },
-                                {
-                                    id: 1,
-                                    template: 'default',
-                                    content: '0.00000000',
-                                    align: 'right',
-                                },
-                                {
-                                    id: 2,
-                                    template: 'default',
-                                    content: '0.00004',
-                                    align: 'right',
-                                },
-                                {
-                                    id: 3,
-                                    template: 'default',
-                                    content: '18-11-30 - 22:40:17',
-                                    align: 'right',
-                                },
-                                {
-                                    id: 4,
-                                    template: 'type',
-                                    content: false,
-                                    align: 'center',
-                                },
-                                {
-                                    id: 5,
-                                    template: 'status',
-                                    content: false,
+                                    width: '74px',
+                                    content: true,
                                     align: 'right',
                                 }
                             ]
@@ -233,36 +204,42 @@
                                 {
                                     id: 0,
                                     template: 'default',
+                                    width: '119px',
                                     content: '1.00000000',
                                     align: 'left',
                                 },
                                 {
                                     id: 1,
                                     template: 'default',
+                                    width: '51px',
                                     content: '0.00000000',
                                     align: 'right',
                                 },
                                 {
                                     id: 2,
                                     template: 'default',
+                                    width: '111px',
                                     content: '0.00004',
                                     align: 'right',
                                 },
                                 {
                                     id: 3,
                                     template: 'default',
+                                    width: '200px',
                                     content: '18-11-30 - 22:40:17',
                                     align: 'right',
                                 },
                                 {
                                     id: 4,
                                     template: 'type',
+                                    width: '133px',
                                     content: true,
                                     align: 'center',
                                 },
                                 {
                                     id: 5,
                                     template: 'status',
+                                    width: '74px',
                                     content: true,
                                     align: 'right',
                                 }
@@ -274,36 +251,42 @@
                                 {
                                     id: 0,
                                     template: 'default',
+                                    width: '119px',
                                     content: '1.00000000',
                                     align: 'left',
                                 },
                                 {
                                     id: 1,
                                     template: 'default',
+                                    width: '51px',
                                     content: '0.00000000',
                                     align: 'right',
                                 },
                                 {
                                     id: 2,
                                     template: 'default',
+                                    width: '111px',
                                     content: '0.00004',
                                     align: 'right',
                                 },
                                 {
                                     id: 3,
                                     template: 'default',
+                                    width: '200px',
                                     content: '18-11-30 - 22:40:17',
                                     align: 'right',
                                 },
                                 {
                                     id: 4,
                                     template: 'type',
+                                    width: '133px',
                                     content: true,
                                     align: 'center',
                                 },
                                 {
                                     id: 5,
                                     template: 'status',
+                                    width: '74px',
                                     content: true,
                                     align: 'right',
                                 }
@@ -315,36 +298,42 @@
                                 {
                                     id: 0,
                                     template: 'default',
+                                    width: '119px',
                                     content: '1.00000000',
                                     align: 'left',
                                 },
                                 {
                                     id: 1,
                                     template: 'default',
+                                    width: '51px',
                                     content: '0.00000000',
                                     align: 'right',
                                 },
                                 {
                                     id: 2,
                                     template: 'default',
+                                    width: '111px',
                                     content: '0.00004',
                                     align: 'right',
                                 },
                                 {
                                     id: 3,
                                     template: 'default',
+                                    width: '200px',
                                     content: '18-11-30 - 22:40:17',
                                     align: 'right',
                                 },
                                 {
                                     id: 4,
                                     template: 'type',
+                                    width: '133px',
                                     content: true,
                                     align: 'center',
                                 },
                                 {
                                     id: 5,
                                     template: 'status',
+                                    width: '74px',
                                     content: true,
                                     align: 'right',
                                 }
@@ -356,36 +345,324 @@
                                 {
                                     id: 0,
                                     template: 'default',
+                                    width: '119px',
                                     content: '1.00000000',
                                     align: 'left',
                                 },
                                 {
                                     id: 1,
                                     template: 'default',
+                                    width: '51px',
                                     content: '0.00000000',
                                     align: 'right',
                                 },
                                 {
                                     id: 2,
                                     template: 'default',
+                                    width: '111px',
                                     content: '0.00004',
                                     align: 'right',
                                 },
                                 {
                                     id: 3,
                                     template: 'default',
+                                    width: '200px',
                                     content: '18-11-30 - 22:40:17',
                                     align: 'right',
                                 },
                                 {
                                     id: 4,
                                     template: 'type',
+                                    width: '133px',
                                     content: true,
                                     align: 'center',
                                 },
                                 {
                                     id: 5,
                                     template: 'status',
+                                    width: '74px',
+                                    content: true,
+                                    align: 'right',
+                                }
+                            ]
+                        },
+                        {
+                            id: 7,
+                            rowContent: [
+                                {
+                                    id: 0,
+                                    template: 'default',
+                                    width: '119px',
+                                    content: '1.00000000',
+                                    align: 'left',
+                                },
+                                {
+                                    id: 1,
+                                    template: 'default',
+                                    width: '51px',
+                                    content: '0.00000000',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 2,
+                                    template: 'default',
+                                    width: '111px',
+                                    content: '0.00004',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 3,
+                                    template: 'default',
+                                    width: '200px',
+                                    content: '18-11-30 - 22:40:17',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 4,
+                                    template: 'type',
+                                    width: '133px',
+                                    content: false,
+                                    align: 'center',
+                                },
+                                {
+                                    id: 5,
+                                    template: 'status',
+                                    width: '74px',
+                                    content: false,
+                                    align: 'right',
+                                }
+                            ]
+                        },
+                        {
+                            id: 8,
+                            rowContent: [
+                                {
+                                    id: 0,
+                                    template: 'default',
+                                    width: '119px',
+                                    content: '1.00000000',
+                                    align: 'left',
+                                },
+                                {
+                                    id: 1,
+                                    template: 'default',
+                                    width: '51px',
+                                    content: '0.00000000',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 2,
+                                    template: 'default',
+                                    width: '111px',
+                                    content: '0.00004',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 3,
+                                    template: 'default',
+                                    width: '200px',
+                                    content: '18-11-30 - 22:40:17',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 4,
+                                    template: 'type',
+                                    width: '133px',
+                                    content: true,
+                                    align: 'center',
+                                },
+                                {
+                                    id: 5,
+                                    template: 'status',
+                                    width: '74px',
+                                    content: false,
+                                    align: 'right',
+                                }
+                            ]
+                        },
+                        {
+                            id: 9,
+                            rowContent: [
+                                {
+                                    id: 0,
+                                    template: 'default',
+                                    width: '119px',
+                                    content: '1.00000000',
+                                    align: 'left',
+                                },
+                                {
+                                    id: 1,
+                                    template: 'default',
+                                    width: '51px',
+                                    content: '0.00000000',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 2,
+                                    template: 'default',
+                                    width: '111px',
+                                    content: '0.00004',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 3,
+                                    template: 'default',
+                                    width: '200px',
+                                    content: '18-11-30 - 22:40:17',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 4,
+                                    template: 'type',
+                                    width: '133px',
+                                    content: true,
+                                    align: 'center',
+                                },
+                                {
+                                    id: 5,
+                                    template: 'status',
+                                    width: '74px',
+                                    content: true,
+                                    align: 'right',
+                                }
+                            ]
+                        },
+                        {
+                            id: 10,
+                            rowContent: [
+                                {
+                                    id: 0,
+                                    template: 'default',
+                                    width: '119px',
+                                    content: '1.00000000',
+                                    align: 'left',
+                                },
+                                {
+                                    id: 1,
+                                    template: 'default',
+                                    width: '51px',
+                                    content: '0.00000000',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 2,
+                                    template: 'default',
+                                    width: '111px',
+                                    content: '0.00004',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 3,
+                                    template: 'default',
+                                    width: '200px',
+                                    content: '18-11-30 - 22:40:17',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 4,
+                                    template: 'type',
+                                    width: '133px',
+                                    content: true,
+                                    align: 'center',
+                                },
+                                {
+                                    id: 5,
+                                    template: 'status',
+                                    width: '74px',
+                                    content: true,
+                                    align: 'right',
+                                }
+                            ]
+                        },
+                        {
+                            id: 11,
+                            rowContent: [
+                                {
+                                    id: 0,
+                                    template: 'default',
+                                    width: '119px',
+                                    content: '1.00000000',
+                                    align: 'left',
+                                },
+                                {
+                                    id: 1,
+                                    template: 'default',
+                                    width: '51px',
+                                    content: '0.00000000',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 2,
+                                    template: 'default',
+                                    width: '111px',
+                                    content: '0.00004',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 3,
+                                    template: 'default',
+                                    width: '200px',
+                                    content: '18-11-30 - 22:40:17',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 4,
+                                    template: 'type',
+                                    width: '133px',
+                                    content: true,
+                                    align: 'center',
+                                },
+                                {
+                                    id: 5,
+                                    template: 'status',
+                                    width: '74px',
+                                    content: true,
+                                    align: 'right',
+                                }
+                            ]
+                        },
+                        {
+                            id: 12,
+                            rowContent: [
+                                {
+                                    id: 0,
+                                    template: 'default',
+                                    width: '119px',
+                                    content: '1.00000000',
+                                    align: 'left',
+                                },
+                                {
+                                    id: 1,
+                                    template: 'default',
+                                    width: '51px',
+                                    content: '0.00000000',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 2,
+                                    template: 'default',
+                                    width: '111px',
+                                    content: '0.00004',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 3,
+                                    template: 'default',
+                                    width: '200px',
+                                    content: '18-11-30 - 22:40:17',
+                                    align: 'right',
+                                },
+                                {
+                                    id: 4,
+                                    template: 'type',
+                                    width: '133px',
+                                    content: true,
+                                    align: 'center',
+                                },
+                                {
+                                    id: 5,
+                                    template: 'status',
+                                    width: '74px',
                                     content: true,
                                     align: 'right',
                                 }

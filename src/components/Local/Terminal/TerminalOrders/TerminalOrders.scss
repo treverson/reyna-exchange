@@ -1,6 +1,18 @@
-.TerminalOrders__content {
-}
-
 .TerminalOrders__section {
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  .TerminalPrimaryTabItem {
+    .TerminalTableGenerators {
+      height: 100%;
+    }
+  }
+}
+
+.TerminalOrders__content {
+  height: 100%;
+
+  overflow: hidden;
 }

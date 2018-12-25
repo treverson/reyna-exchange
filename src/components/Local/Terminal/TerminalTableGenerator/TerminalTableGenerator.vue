@@ -1,6 +1,6 @@
 <template>
-    <div class="TerminalTableGenerator">
-        <table class="TerminalTableGenerator">
+    <div class="TerminalTableGenerators">
+        <table v-if="tableHead === true" class="TerminalTableGenerator">
             <tr>
                 <th v-for="column in tableData.head"
                     v-bind:key="column.id"
@@ -12,7 +12,7 @@
         </table>
 
         <div class="TerminalTableGenerator__content" v-bar>
-            <div>
+            <div class="TerminalTableGenerator__inner">
                 <table class="TerminalTableGenerator">
                     <tr v-for="row in tableData.body" v-bind:key="row.id" class="TerminalTableGenerator__bodyRow">
                         <th v-for="column in row.rowContent"
