@@ -1,0 +1,149 @@
+@import "../../../components/Local/Account/AccountContainer/cointainer-size";
+
+.AccountTerminal__container {
+  width: 100%;
+  height: calc(100vh - 60px - 12.5px - 12.5px);
+}
+
+.AccountTerminal__content {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.AccountTerminal__column {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.AccountTerminal__column_typeBig {
+  max-width: 710px;
+  width: 100%;
+  height: 100%;
+}
+
+.AccountTerminal__column_typeMedium {
+  max-width: 256px;
+  width: 100%;
+  height: 100%;
+}
+
+.AccountTerminal__componentCharts {
+  height: 100%;
+  min-height: 300px;
+
+  .TerminalCharts {
+    height: 100%;
+  }
+}
+
+.AccountTerminal__componentOrders {
+  height: 254px;
+  margin-top: 15px;
+
+  flex-shrink: 0;
+
+  .TerminalOrders {
+    height: 100%;
+  }
+}
+
+.AccountTerminal__History {
+  height: 100%;
+
+  .TerminalTableHistory,
+  .TerminalPrimarySection {
+    height: 100%;
+  }
+}
+
+.AccountTerminal__componentOrderBook {
+  height: 100%;
+  min-height: 300px;
+
+  overflow: hidden;
+
+  .TerminalOrderBook,
+  .TerminalPrimarySection {
+    height: 100%;
+  }
+}
+
+.AccountTerminal__componentOrder {
+  height: 254px;
+  margin-top: 15px;
+
+  flex-shrink: 0;
+
+  .terminal-order {
+    height: 100%;
+  }
+}
+
+@media (max-width: $containerLarge) {
+  .AccountTerminal__column_typeMedium {
+    max-width: 220px;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  .AccountTerminal__column_typeBig {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: $containerMedium) {
+  .AccountTerminal__column_typeBig {
+    margin: 0;
+  }
+
+  .AccountTerminal__column_typeMedium {
+    max-width: none;
+
+    width: calc(100% - 438px - 16px);
+    margin-top: 16px;
+
+    &:not(:last-child) {
+      margin: 0;
+
+      width: calc(100% - 257px - 16px);
+      margin-top: 16px;
+    }
+  }
+
+  .AccountTerminal__container {
+    height: auto;
+  }
+
+  .AccountTerminal__content {
+    flex-wrap: wrap;
+    padding-bottom: 21.5px;
+
+    overflow: auto;
+  }
+
+  .AccountTerminal__componentCharts {
+    order: 0;
+
+    height: 415px;
+    max-height: none;
+  }
+
+  .AccountTerminal__componentOrders {
+    order: 1;
+
+    margin-top: 16px;
+
+    height: 266px;
+    max-height: none;
+  }
+}

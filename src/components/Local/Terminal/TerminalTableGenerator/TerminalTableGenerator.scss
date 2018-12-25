@@ -1,0 +1,104 @@
+.TerminalTableGenerator {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.TerminalTableGenerator__headerColumn {
+  height: 23px;
+
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 10px;
+  font-weight: normal;
+
+  border-top: 1px solid #131212;
+  border-bottom: 1px solid #131212;
+
+  &:first-child {
+    padding-left: 12px;
+  }
+
+  &:last-child {
+    padding-right: 12px;
+  }
+}
+
+.TerminalTableGenerator__bodyColumn {
+  height: 17px;
+
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 10px;
+  font-weight: normal;
+
+  &:first-child {
+    padding-left: 12px;
+  }
+
+  &:last-child {
+    padding-right: 12px;
+  }
+}
+
+.TerminalTableGenerator__template-red {
+  color: #F65454;
+}
+
+.TerminalTableGenerator__template-gray {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.TerminalTableGenerator__bodyRow {
+  &:first-child {
+    .TerminalTableGenerator__bodyColumn {
+      padding-top: 8.8px;
+    }
+  }
+
+  &:last-child {
+    .TerminalTableGenerator__bodyColumn {
+      padding-bottom: 8.8px;
+    }
+  }
+}
+
+.TerminalTableGenerator__template-type-red {
+  color: #F65454;
+}
+
+.TerminalTableGenerator__template-type-green {
+  color: #00B121;
+}
+
+.TerminalTableGenerator__statusWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.TerminalTableGenerator__buttonStatus {
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+
+  padding: 0 5px;
+
+  border-radius: 3px;
+
+  color: #fff;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.TerminalTableGenerator__buttonStatus_Close {
+  background-color: #D21616;
+  margin-left: 5px;
+}
+
+.TerminalTableGenerator__statusCanceled {
+  color: rgba(255, 255, 255, 0.29);
+}
+
+.TerminalTableGenerator__content {
+  width: 100%;
+}

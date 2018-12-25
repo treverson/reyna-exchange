@@ -11,10 +11,10 @@
 </template>
 
 <script>
-    import Page from '@/components/Core/Page/Page.vue'
-    import AuthHeader from '@/components/Auth/AuthHeader/AuthHeader.vue'
-    import AuthSignInFrom from '@/components/Auth/AuthSignInFrom/AuthSignInFrom.vue'
-    import Flash from '@/components/Core/Flash/Flash.vue'
+    import Page from '@/components/Global/Page/Page.vue'
+    import AuthHeader from '@/components/Local/Auth/AuthHeader/AuthHeader.vue'
+    import AuthSignInFrom from '@/components/Local/Auth/AuthSignInFrom/AuthSignInFrom.vue'
+    import Flash from '@/components/Global/Flash/Flash.vue'
 
     export default {
         name: "AuthSignIn",

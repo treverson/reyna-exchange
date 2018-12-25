@@ -12,11 +12,11 @@
 </template>
 
 <script>
-    import Page from '@/components/Core/Page/Page.vue'
-    import AuthHeader from '@/components/Auth/AuthHeader/AuthHeader.vue'
+    import Page from '@/components/Global/Page/Page.vue'
+    import AuthHeader from '@/components/Local/Auth/AuthHeader/AuthHeader.vue'
     import PrimaryInnerBreadcrumbs from "@/views/PrimaryInner/components/Breadcrumbs/Breadcrumbs.vue";
     import PrimaryInnerContent from "@/views/PrimaryInner/components/Content/Content.vue";
-    import PrimaryInnerFooter from "@/components/Account/Footer/Footer.vue";
+    import PrimaryInnerFooter from "@/components/Local/Account/Footer/Footer.vue";
 
     export default {
         name: "PrimaryInner",

@@ -9,12 +9,12 @@
 </template>
 
 <script>
-  import Header from '@/components/Landing/Header'
-  import AboutProduct from '@/components/Landing/AboutProduct'
-  import InformationCategory from '@/components/Landing/InformationCategory'
-  import Page from '@/components/Core/Page/Page'
-  import ProjectDashboard from '@/components/Landing/ProjectDashboard'
-  import Footer from '@/components/Landing/Footer'
+  import Header from '@/components/Local/Landing/Header'
+  import AboutProduct from '@/components/Local/Landing/AboutProduct'
+  import InformationCategory from '@/components/Local/Landing/InformationCategory'
+  import Page from '@/components/Global/Page/Page'
+  import ProjectDashboard from '@/components/Local/Landing/ProjectDashboard'
+  import Footer from '@/components/Local/Landing/Footer'
 
   export default {
     name: 'home',

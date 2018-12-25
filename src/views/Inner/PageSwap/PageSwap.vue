@@ -40,11 +40,11 @@
     import qs from 'qs'
 
     import PrimaryInner from "@/views/PrimaryInner/PrimaryInner";
-    import AccountContainer from "@/components/Account/AccountContainer/AccountContainer";
+    import AccountContainer from "@/components/Local/Account/AccountContainer/AccountContainer";
     import PrimaryInnerHeading from "@/views/PrimaryInner/components/Heading/Heading";
     import PrimaryInnerBlockSection from "@/views/PrimaryInner/components/BlockSection/BlockSection";
-    import SwapCurrency from "@/components/Core/SwapCurrency/SwapCurrency";
-    import UserButton from "@/components/Core/UserButton/UserButton";
+    import SwapCurrency from "@/components/Global/SwapCurrency/SwapCurrency";
+    import UserButton from "@/components/Global/UserButton/UserButton";
     export default {
         name: "PageSwap",
         components: {

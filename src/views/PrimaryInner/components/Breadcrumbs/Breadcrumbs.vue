@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import AccountContainer from "@/components/Account/AccountContainer/AccountContainer";
+    import AccountContainer from "@/components/Local/Account/AccountContainer/AccountContainer";
     export default {
         name: "Breadcrumbs",
         components: {AccountContainer}

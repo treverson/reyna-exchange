@@ -1,0 +1,113 @@
+.TerminalCharts {
+  width: 100%;
+
+  padding: 7px 12px;
+  box-sizing: border-box;
+
+  background-color: #202020;
+}
+
+.TerminalCharts__header {
+  width: 100%;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 1px 0 15px;
+  box-sizing: border-box;
+
+  background-color: #272727;
+}
+
+.TerminalCharts__heading {
+  margin: 0 auto 0 0;
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.TerminalCharts__menuSection {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 17px;
+  }
+}
+
+.TerminalCharts__menuCurrent {
+  display: flex;
+  align-items: center;
+}
+
+.TerminalCharts__menuHeading {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 10px;
+}
+
+.TerminalCharts__menuIcon {
+  color: #fff;
+  font-size: 4px;
+
+  margin-left: 7.6px;
+}
+
+.TerminalCharts__control {
+  height: 100%;
+  padding: 0 3px;
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11px;
+  font-weight: normal;
+
+  outline: none;
+  cursor: pointer;
+
+  border-bottom: 1px solid transparent;
+
+  transition: .15s ease;
+
+  &:not(:last-child) {
+    margin-right: 17px;
+  }
+
+  &:hover:not(.TerminalCharts__control_Active) {
+    color: #fff;
+  }
+}
+
+.TerminalCharts__control_Active {
+  color: #D21616;
+  border-color: #D21616;
+}
+
+.TerminalCharts__resize {
+  height: calc(100% - 8px);
+
+  display: flex;
+  align-items: center;
+
+  color: #656565;
+
+  outline: none;
+  cursor: pointer;
+
+  padding: 4.5px 9.5px;
+  box-sizing: border-box;
+
+  border-left: 1px solid rgba(112, 112, 112, 0.25);
+}
+
+.TerminalCharts__content {
+  background-color: #202020;
+}

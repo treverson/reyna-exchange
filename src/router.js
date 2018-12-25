@@ -8,9 +8,9 @@ import AccountDashboard from './views/Account/AccountDashboard/AccountDashboard.
 import AccountBuyAndSell from './views/Account/AccountBuyAndSell/AccountBuyAndSell.vue'
 import AccountHistory from './views/Account/AccountHistory/AccountHistory.vue'
 import AccountSettings from './views/Account/AccountSettings/AccountSettings.vue'
+import AccountTerminal from './views/Account/AccountTerminal/AccountTerminal.vue'
 
 // Terminal
-import TerminalEntryPoint from './views/Terminal/TerminalEntryPoint.vue'
 import TerminalHome from './views/Terminal/TerminalHome/TerminalHome.vue'
 
 // Auth
@@ -63,19 +63,17 @@ export default new Router({
                     path: 'settings',
                     name: 'AccountSettings',
                     component: AccountSettings
+                },
+                {
+                    path: 'terminal',
+                    name: 'AccountTerminal',
+                    component: AccountTerminal
                 }
             ]
         },
         {
             path: '/terminal',
-            component: TerminalEntryPoint,
-            children: [
-                {
-                    path: '',
-                    name: 'terminalHome',
-                    component: TerminalHome
-                }
-            ]
+            component: TerminalHome,
         },
         {
             path: '/auth',

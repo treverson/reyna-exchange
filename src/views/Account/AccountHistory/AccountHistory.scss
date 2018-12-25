@@ -1,6 +1,8 @@
-@import "../../../components/Account/AccountContainer/cointainer-size";
+@import "../../../components/Local/Account/AccountContainer/cointainer-size";
 
 .account-history__grid {
+  height: calc(100vh - 60px - 13px - 27px - 20px);
+
   margin-top: 13px;
 
   display: flex;
@@ -22,6 +24,7 @@
   flex-shrink: 0;
   max-width: calc(100% - 256px - 17px);
   width: 100%;
+  height: 100%;
 }
 
 @media (max-width: $containerMedium) {

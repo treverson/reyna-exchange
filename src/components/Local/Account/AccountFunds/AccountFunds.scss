@@ -1,0 +1,106 @@
+.AccountFunds {
+  width: 100%;
+  height: 100%;
+}
+
+.AccountFunds__section {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.AccountFunds__header {
+  flex-shrink: 0;
+}
+
+.AccountFunds__information {
+  padding: 16px 20px;
+  box-sizing: border-box;
+
+  flex-shrink: 0;
+
+  background-color: #fff;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.AccountFunds__desk {
+  display: block;
+
+  color: #161616;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+
+  margin-bottom: 5px;
+}
+
+.AccountFunds__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.AccountFunds__currency {
+  color: #161616;
+  font-size: 26px;
+  line-height: 35px;
+  font-weight: bold;
+}
+
+.AccountFunds__price-count {
+  display: block;
+
+  color: #161616;
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+.AccountFunds__button {
+  max-width: 153px;
+
+  margin-top: 10.5px;
+
+  .user-button__content {
+    display: block;
+    text-align: center;
+  }
+}
+
+.AccountFunds__content {
+  height: 100%;
+  background-color: #fff;
+}
+
+.AccountFunds__wrapper {
+}
+
+.AccountFunds__item {
+  width: 100%;
+
+  padding: 8.5px 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:not(:first-child) {
+    border-top: 1px solid #D9D9D9;
+  }
+}
+
+.AccountFunds__item-heading {
+  color: #000000;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.AccountFunds__item-count {
+  color: #000000;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+}

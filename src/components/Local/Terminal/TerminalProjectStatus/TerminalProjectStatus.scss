@@ -1,0 +1,56 @@
+@import "../../Account/AccountContainer/cointainer-size";
+
+.terminal-project-status {
+  display: flex;
+}
+
+.terminal-project-status__wrapper {
+  display: flex;
+}
+
+.terminal-project-status__section {
+  display: flex;
+  align-items: center;
+
+  min-height: 34px;
+
+  padding: 0 19.5px;
+
+  &:first-child {
+    border-left: 1px solid #242424;
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid #242424;
+  }
+}
+
+.terminal-project-status__title {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+
+  margin-right: 9px;
+}
+
+.terminal-project-status__content {
+  margin: 0;
+
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.terminal-project-status__content--type-percent {
+  color: #00B121;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 18px;
+}
+
+@media (max-width: $containerLarge) {
+  .terminal-project-status__section {
+    padding: 0 10px;
+  }
+}

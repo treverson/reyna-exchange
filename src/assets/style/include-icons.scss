@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-minus:before {
+  content: "\e90e";
+}
+.icon-plus:before {
+  content: "\e90f";
+}
+.icon-resize:before {
+  content: "\e90d";
+}
 .icon-favorite:before {
   content: "\e90c";
 }
@@ -63,5 +72,3 @@
 .icon-table-filter:before {
   content: "\e90b";
 }
-
-

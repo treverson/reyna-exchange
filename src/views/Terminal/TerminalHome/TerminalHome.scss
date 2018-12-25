@@ -1,0 +1,52 @@
+.terminal__grid {
+  width: 100%;
+
+  height: calc(100vh - 60px - 12.5px - 11px);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.terminal__column {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.terminal__column_size_big {
+  max-width: 711px;
+}
+
+.terminal__column_size_medium {
+  max-width: 256px;
+}
+
+.terminal__column_size_small {
+  max-width: 256px;
+}
+
+.terminal__componentOrderBook {
+  overflow: hidden;
+  height: calc(100% - 254px - 15px);
+  margin-bottom: 15px;
+}
+
+.terminal__componentCharts {
+  height: calc(100% - 248px - 15px);
+}
+
+.terminal__componentOrders {
+  height: 248px;
+
+  .TerminalPrimarySection {
+    height: 100%;
+  }
+}
+
+.terminal__componentHistory {
+  height: 100%;
+  overflow: hidden;
+
+  .TerminalPrimarySection {
+    height: 100%;
+  }
+}

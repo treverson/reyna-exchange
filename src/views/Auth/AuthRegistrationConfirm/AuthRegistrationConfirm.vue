@@ -6,9 +6,9 @@
 </template>
 
 <script>
-    import Page from '@/components/Core/Page/Page.vue'
-    import AuthHeader from '@/components/Auth/AuthHeader/AuthHeader.vue'
-    import AuthConfirmEmailForm from '@/components/Auth/AuthConfirmEmailForm/AuthConfirmEmailForm.vue'
+    import Page from '@/components/Global/Page/Page.vue'
+    import AuthHeader from '@/components/Local/Auth/AuthHeader/AuthHeader.vue'
+    import AuthConfirmEmailForm from '@/components/Local/Auth/AuthConfirmEmailForm/AuthConfirmEmailForm.vue'
 
     export default {
         name: "AuthRegistrationConfirm",

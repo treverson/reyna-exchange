@@ -486,16 +486,16 @@
 </template>
 
 <script>
-    import Page from "@/components/Core/Page/Page";
-    import AccountHeader from "@/components/Account/Header/Header";
-    import AccountFooter from "@/components/Account/Footer/Footer";
-    import Container from "@/components/Account/AccountContainer/AccountContainer";
-    import FormInput from "@/components/Core/Form/FormInput/FormInput";
-    import UserButton from "@/components/Core/UserButton/UserButton";
-    import DataList from "@/components/Account/DataList/DataList";
-    import FormCheckbox from "@/components/Core/Form/FormCheckbox/FormCheckbox";
-    import FormRadio from "@/components/Core/Form/FormRadio/FormRadio";
-    import FormGroupRadio from "@/components/Core/Form/FormGroupRadio/FormGroupRadio";
+    import Page from "@/components/Global/Page/Page";
+    import AccountHeader from "@/components/Local/Account/Header/Header";
+    import AccountFooter from "@/components/Local/Account/Footer/Footer";
+    import Container from "@/components/Local/Account/AccountContainer/AccountContainer";
+    import FormInput from "@/components/Global/Form/FormInput/FormInput";
+    import UserButton from "@/components/Global/UserButton/UserButton";
+    import DataList from "@/components/Local/Account/DataList/DataList";
+    import FormCheckbox from "@/components/Global/Form/FormCheckbox/FormCheckbox";
+    import FormRadio from "@/components/Global/Form/FormRadio/FormRadio";
+    import FormGroupRadio from "@/components/Global/Form/FormGroupRadio/FormGroupRadio";
     export default {
         name: "AccountSettings",
         components: {

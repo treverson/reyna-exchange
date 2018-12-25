@@ -6,9 +6,9 @@
 </template>
 
 <script>
-    import Page from '@/components/Core/Page/Page.vue'
-    import AuthHeader from '@/components/Auth/AuthHeader/AuthHeader.vue'
-    import AuthRegisterForm from '@/components/Auth/AuthRegisterForm/AuthRegisterForm.vue'
+    import Page from '@/components/Global/Page/Page.vue'
+    import AuthHeader from '@/components/Local/Auth/AuthHeader/AuthHeader.vue'
+    import AuthRegisterForm from '@/components/Local/Auth/AuthRegisterForm/AuthRegisterForm.vue'
 
     export default {
         name: "AuthRegister",

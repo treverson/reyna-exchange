@@ -1,6 +1,8 @@
-@import "../../../components/Account/AccountContainer/cointainer-size";
+@import "../../../components/Local/Account/AccountContainer/cointainer-size";
 
 .account-dashboard__grid {
+  height: calc(100vh - 60px - 13px - 27px - 20px);
+
   margin-top: 13px;
 
   display: flex;
@@ -20,11 +22,18 @@
 .account-dashboard__item--type-available-currencies {
   max-width: 712px;
   width: 100%;
+  height: 100%;
+
+  .available-currencies {
+    height: 100%;
+    background-color: #fff;
+  }
 }
 
 .account-dashboard__item--type-my-funds {
   max-width: 256px;
   width: 100%;
+  height: 100%;
 }
 
 .account__section-tab--isActive-yes {
@@ -35,6 +44,9 @@
 @media (max-width: $containerLarge) {
   .account-dashboard__grid {
     flex-wrap: wrap;
+
+    height: auto;
+    padding-bottom: 40px;
   }
 
   .account-dashboard__item--type-getting-start {
@@ -74,5 +86,13 @@
     width: 100%;
     max-width: 100%;
     margin-bottom: 0;
+  }
+
+  .account-dashboard__item--type-my-funds {
+    height: calc(100vh - 60px - 50px - 41px - 12px);
+  }
+
+  .account-funds__list {
+    height: 100%;
   }
 }
